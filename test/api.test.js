@@ -1,3 +1,5 @@
+import { Readable } from 'node:stream';
+import { testDb } from './sqlite-fixture.js';
 // Testes automáticos da API do núcleo. Correr com: npm test
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
@@ -8,34 +10,52 @@ import { join } from 'node:path';
 const dir = mkdtempSync(join(tmpdir(), 'lpj-test-'));
 Object.assign(process.env, {
   DATA_DIR: dir, ADMIN_NAME: 'Teresa Antunes', ADMIN_EMAIL: 'admin@exemplo.pt', ADMIN_PIN: '3690',
-  LOG_EMAILS: '0', ENV_FILE: join(dir, 'none.env'),
+  LOG_EMAILS: '0', SUPABASE_URL: 'https://storage.example.test', SUPABASE_SERVICE_ROLE_KEY: 'test-key', ENV_FILE: join(dir, 'none.env'),
 });
+const realFetch = globalThis.fetch;
+const objects = new Map();
+globalThis.fetch = async (url, options = {}) => {
+  if (!String(url).startsWith('https://storage.example.test/')) return realFetch(url, options);
+  const u = new URL(url);
+  const key = u.pathname.replace('/storage/v1/object', '');
+  if (key.startsWith('/upload/sign/')) return new Response(JSON.stringify({ url: '/object/upload/sign' + key.slice(12) + '?token=test-signed' }));
+  if (key.startsWith('/sign/')) return new Response(JSON.stringify({ signedURL: '/object/signed' + key.slice(5) }), { headers: { 'Content-Type': 'application/json' } });
+  if (options.method === 'POST') { objects.set(key, options.body); return new Response('{}'); }
+  if (options.method === 'DELETE') { objects.delete(key); return new Response('{}'); }
+  const data = objects.get(key);
+  return data ? new Response(data, { headers: { 'Content-Length': String(data.length) } }) : new Response('', { status: 404 });
+};
 const { createApp } = await import('../server/index.js');
 
 let app, base;
 before(async () => {
-  app = createApp({ dbFile: join(dir, 'test.db') });
-  await new Promise((r) => app.server.listen(0, '127.0.0.1', r));
-  base = `http://127.0.0.1:${app.server.address().port}`;
+  app = await createApp({ db: testDb() });
+
 });
-after(() => { app.server.close(); rmSync(dir, { recursive: true, force: true }); });
+after(async () => { globalThis.fetch = realFetch; await app.db.close(); rmSync(dir, { recursive: true, force: true }); });
 
 // Pequeno cliente com cookies
 function client() {
   let cookie = '';
   return async (method, path, body, { csrf = true } = {}) => {
-    const res = await fetch(base + path, {
-      method,
-      headers: { ...(body ? { 'content-type': 'application/json' } : {}), ...(csrf ? { 'x-lpj': '1' } : {}), ...(cookie ? { cookie } : {}) },
-      body: body ? JSON.stringify(body) : undefined,
-    });
+    const req = Readable.from(body ? [Buffer.from(JSON.stringify(body))] : []);
+    Object.assign(req, { method, url: path, headers: { ...(body ? { 'content-type': 'application/json' } : {}), ...(csrf ? { 'x-lpj': '1' } : {}), ...(cookie ? { cookie } : {}) }, socket: { remoteAddress: '127.0.0.1' } });
+    let payload = Buffer.alloc(0);
+    const res = {
+      headersSent: false, headers: new Headers(), status: 0,
+      writeHead(status, headers) { this.status = status; this.headersSent = true; for (const [k,v] of Object.entries(headers)) { for (const item of [].concat(v)) this.headers.append(k, item); } },
+      end(data) { if (data) payload = Buffer.from(data); },
+      async json() { return JSON.parse(payload.toString()); },
+      async arrayBuffer() { return payload; },
+    };
+    await app.handle(req, res);
     const sc = res.headers.getSetCookie();
     if (sc.length) cookie = sc.map((c) => c.split(';')[0]).join('; ');
     const ct = res.headers.get('content-type') || '';
     return { status: res.status, data: ct.includes('json') ? await res.json() : await res.arrayBuffer(), headers: res.headers };
   };
 }
-const lastEmailTo = (email) => app.db.all('SELECT * FROM emails ORDER BY id DESC').find((e) => e.to_json.includes(email));
+const lastEmailTo = async (email) => (await app.db.all('SELECT * FROM emails ORDER BY id DESC')).find((e) => e.to_json.includes(email));
 
 const admin = client();
 const ana = client();
@@ -82,7 +102,7 @@ test('registo fica pendente até o CA aprovar', async () => {
   assert.deepEqual(u.extra.funcs, ['CAD', 'LIN']);
   const ap = await admin('POST', `/api/users/${u.id}/approve`);
   assert.equal(ap.data.user.status, 'ativo');
-  assert.ok(lastEmailTo('ana@exemplo.pt').subject.includes('aprovada'));
+  assert.ok((await lastEmailTo('ana@exemplo.pt')).subject.includes('aprovada'));
 });
 
 test('entrar com telemóvel e bloqueio após 5 tentativas', async () => {
@@ -137,7 +157,7 @@ test('recuperar o código por email', async () => {
   assert.equal(r.status, 200);
   const ghost = await anon('POST', '/api/auth/forgot', { id: 'ninguem@exemplo.pt' });
   assert.equal(ghost.status, 200, 'não revela se a conta existe');
-  const mail = lastEmailTo('ana@exemplo.pt');
+  const mail = await lastEmailTo('ana@exemplo.pt');
   const code = mail.body.match(/confirmação: (\d{6})/)[1];
   const wrong = await anon('POST', '/api/auth/reset', { id: 'ana@exemplo.pt', code: '000000', pin: '4826', pin2: '4826' });
   assert.equal(wrong.status, 400);
@@ -185,8 +205,8 @@ test('documentos: publicar, ver, descarregar e apagar', async () => {
   assert.equal(list.data.documents[0].seen, false);
   assert.equal((await ana('GET', '/api/me')).data.unseenDocs, 1);
   const file = await ana('GET', `/api/documents/${d.data.id}/file`);
-  assert.equal(file.status, 200);
-  assert.match(file.headers.get('content-disposition'), /Circular 3-2026\.pdf/);
+  assert.equal(file.status, 302);
+  assert.match(file.headers.get('location'), /download=Circular/);
   assert.equal((await ana('GET', '/api/documents')).data.documents[0].seen, true);
   assert.equal((await ana('GET', `/api/documents/${l.data.id}/file`)).status, 404);
   assert.equal((await ana('DELETE', `/api/documents/${d.data.id}`)).status, 403);
@@ -196,7 +216,7 @@ test('documentos: publicar, ver, descarregar e apagar', async () => {
 test('administração de utilizadores', async () => {
   const c = await admin('POST', '/api/users', { name: 'Miguel Santos', email: 'miguel@exemplo.pt', phone: '913000000', role: 'ja', status: 'ativo' });
   assert.equal(c.status, 200, JSON.stringify(c.data));
-  assert.match(lastEmailTo('miguel@exemplo.pt').body, /Esqueci-me do código/);
+  assert.match((await lastEmailTo('miguel@exemplo.pt')).body, /Esqueci-me do código/);
   const e = await admin('PUT', `/api/users/${c.data.user.id}`, { pin: '1470' });
   assert.equal(e.status, 200);
   const miguel = client();
@@ -218,4 +238,31 @@ test('administração de utilizadores', async () => {
 test('sair termina a sessão', async () => {
   assert.equal((await ana('POST', '/api/auth/logout')).status, 200);
   assert.equal((await ana('GET', '/api/me')).status, 401);
+});
+
+test('home e caixa de saída resolvem os resultados assíncronos', async () => {
+  const home = await admin('GET', '/api/home');
+  assert.equal(home.status, 200);
+  assert.equal(typeof home.data.unread, 'number');
+  assert.ok(Array.isArray(home.data.unseenDocTitles));
+  const sent = await admin('GET', '/api/messages?box=out');
+  assert.equal(sent.status, 200);
+  assert.ok(sent.data.messages.some(m => m.subject === 'Disponibilidades' && Array.isArray(m.to)));
+});
+
+test('signed document upload requires admin and rejects tampered receipts', async () => {
+  const login = client();
+  await login('POST', '/api/auth/login', { id: 'ana@exemplo.pt', pin: '4826' });
+  assert.equal((await login('POST', '/api/documents/upload', { name: 'test.pdf', size: 100 })).status, 403);
+  assert.equal((await admin('POST', '/api/documents/upload', { name: 'bad.exe', size: 100 })).status, 400);
+  assert.equal((await admin('POST', '/api/documents/upload', { name: 'large.pdf', size: 16 * 1048576 })).status, 400);
+  const signed = await admin('POST', '/api/documents/upload', { name: 'signed.pdf', size: 6 });
+  assert.equal(signed.status, 200);
+  assert.match(signed.data.uploadUrl, /^https:\/\/storage.example.test\//);
+  const name = JSON.parse(Buffer.from(signed.data.receipt.split('.')[0], 'base64url')).name;
+  objects.set('/documents/' + name, Buffer.from('%PDF-x'));
+  const bad = await admin('POST', '/api/documents', { title: 'Signed', cat: 'Outros', kind: 'file', file: { name: 'signed.pdf', receipt: signed.data.receipt + 'x' } });
+  assert.equal(bad.status, 400);
+  const saved = await admin('POST', '/api/documents', { title: 'Signed', cat: 'Outros', kind: 'file', file: { name: 'signed.pdf', receipt: signed.data.receipt } });
+  assert.equal(saved.status, 200, JSON.stringify(saved.data));
 });

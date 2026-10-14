@@ -1,0 +1,12 @@
+import { createApp } from '../server/index.js';
+let application;
+export default async function handler(req, res) {
+  try {
+    application ||= createApp().catch(error => { application = undefined; throw error; });
+    const app = await application;
+    await app.handle(req, res);
+  } catch {
+    res.writeHead(503, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
+    res.end(JSON.stringify({ error: 'Serviço temporariamente indisponível.' }));
+  }
+}

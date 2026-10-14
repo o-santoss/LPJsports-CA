@@ -1,84 +1,67 @@
-# Base LPJ Sports
+# LPJ Sports · C.Arbitragem
 
-O núcleo comum das apps da **LPJ Sports**: contas, perfis, notificações, emails, documentos e a imagem LPJ.
-Cada app (C.Arbitragem, Live Scoring, …) corre em cima desta base. A primeira é a **C.Arbitragem**.
+React + Node.js API, PostgreSQL via `DATABASE_URL`, Supabase private Storage, Vercel hosting.
 
-- **Frontend:** React 19 (pasta `client/`), compilado com esbuild para `public/`
-- **Backend:** Node.js 22, sem frameworks externos (pasta `server/`)
-- **Base de dados:** SQL (SQLite incluído no Node). Uma cópia de segurança é copiar a pasta `data/`. O acesso à base de dados está todo em `server/core/db.js`, por isso é possível passar para PostgreSQL ou MariaDB sem mexer no resto.
-- **Emails:** Brevo (API). Sem chave configurada, os emails ficam registados como "simulado".
+## Local development
 
-## O que a base já faz
+Use Node 22.13 or newer (recommended: Node 22 LTS).
 
-| Área | O que inclui |
-|---|---|
-| Contas | Criar conta (fica por aprovar), entrar com email ou telemóvel e código de 4 algarismos, bloqueio após 5 tentativas erradas, recuperar o código por email |
-| Perfis | Dados pessoais, associação (13 associações), foto de perfil, preferências de email, mudar o código, descarregar os meus dados (RGPD) |
-| Papéis | Definidos por app em `server/app.js` (na C.Arbitragem: Árbitro → JA/Chefe → Conselho de Arbitragem); cada papel faz tudo o que o anterior faz |
-| Notificações | Caixa de entrada, mensagens para pessoas ou grupos, respostas, marcar como lido; segue por email conforme as preferências |
-| Documentos | Publicar ficheiros ou links, por categoria e público, aviso de documento novo, contagem de quem viu |
-| Administração | Aprovar/recusar registos, criar e editar utilizadores, desbloquear contas, ver todos os emails e o registo de ações |
-| Aparência | Marca LPJ Sports, 6 paletas de cores, modo claro/escuro, pensada para telemóvel |
-
-## Correr no computador
-
-Precisa do [Node.js 22](https://nodejs.org) ou mais recente.
-
-```bash
-npm install
-npm run build          # compila a app React
-npm run seed:demo      # contas de exemplo (só numa base vazia)
-npm start              # abre em http://localhost:3000
+```sh
+nvm use
+npm ci
+cp .env.example .env
+# Fill the variables locally, then:
+npm run build
+npm start
 ```
 
-Contas de exemplo: `teresa.antunes@exemplo.pt` · 3690 (CA), `miguel.santos@exemplo.pt` · 1470 (JA), `ana.rodrigues@exemplo.pt` · 2468 (Árbitro).
+`npm run dev` watches the client and API. Never commit `.env`, `.env.local`, other environment files or `.vercel/`. Only `.env.example` belongs in Git. No server environment variables are bundled into React.
 
-Para trabalhar no código com recompilação automática: `npm run dev`. Testes: `npm test`.
+## Supabase configuration
 
-## Pôr online
+The existing project and SQL schema are reused. **Startup and demo seeding do not apply migrations.** `server/migrations/001_core.postgres.sql` documents the expected tables and types; do not run it over existing tables. The original SQLite schema remains only as a test fixture/reference.
 
-1. Escolher um alojamento para Node.js com **disco permanente** (a base de dados e os ficheiros ficam na pasta `DATA_DIR`). Por exemplo: Render (Web Service + Disk), Railway (com Volume) ou um servidor próprio (VPS).
-2. Comando de compilação: `npm install && npm run build` · Comando de arranque: `npm start`.
-3. Variáveis de ambiente (ver `.env.example`): `NODE_ENV=production`, `TRUST_PROXY=1`, `PUBLIC_URL`, `DATA_DIR` (no disco permanente), `ADMIN_NAME`, `ADMIN_EMAIL`, `ADMIN_PIN`, e as do Brevo.
-4. No Brevo: confirmar o domínio de envio (SPF e DKIM) e criar uma chave de API.
-5. Endereço próprio (ex.: `arbitragem.lpjsports.pt`): acrescentar um registo CNAME na configuração do domínio.
+Set:
 
-## Cópias de segurança
+- `DATABASE_URL`: Supabase **session pooler**, port 5432, from the Connect panel. Use the exact URL and URL-encode special characters in the password. TLS certificate verification is enabled; `DATABASE_SSL=disable` is only for a local test database.
+- `SUPABASE_URL`: the project HTTPS URL.
+- `SUPABASE_SERVICE_ROLE_KEY`: a server-only service role key. Never add a public frontend prefix.
+- `SUPABASE_PHOTOS_BUCKET=photos` and `SUPABASE_DOCUMENTS_BUCKET=documents`.
+- `PUBLIC_URL`: the site's actual public HTTPS URL.
+- `ADMIN_NAME`, `ADMIN_EMAIL`, `ADMIN_PIN`: optional first administrator, only if users is empty. Remove bootstrap values after initial setup.
+- Brevo variables in `.env.example` if real email delivery is required.
 
-Copiar diariamente a pasta `DATA_DIR` (ficheiro `app.db` e pasta `uploads/`). A maior parte dos alojamentos faz isto com snapshots do disco.
+Create the two Storage buckets as **private** if they do not already exist. Suggested object size limits: 2 MB for photos, 15 MB for documents. Do not grant public access. Session checks and role/audience checks remain in the app API; the service key is used only on the server.
 
-## Segurança
+Photos retain their authenticated `/api/photos/:file` URLs. Documents upload directly to a signed single-object Storage URL and then submit metadata to the API. Upload receipts bind the path, size and expiry to the requesting administrator. Downloads verify the document audience before redirecting to a URL valid for 60 seconds. Documents sent by older API clients as base64 are limited to 3 MB to fit Vercel's request limit; the new UI supports 15 MB.
 
-- Códigos guardados com scrypt (nunca em texto), sessões em cookie HttpOnly e SameSite, cookies só por https em produção
-- Bloqueio de 15 minutos após 5 códigos errados e limite de tentativas por IP
-- Pedidos que alteram dados exigem o cabeçalho `X-LPJ` (proteção contra pedidos de outros sites)
-- Cabeçalhos de segurança (CSP, X-Frame-Options, nosniff) e validação de todos os dados recebidos
-- Fotos e documentos só para quem tem sessão; documentos respeitam o público escolhido
-- Registo de ações importantes (entradas, aprovações, alterações)
+Objects uploaded but never submitted can remain unused in Storage; periodically remove confirmed unreferenced objects. Existing local SQLite rows and `data/uploads` are not copied automatically. Back them up and plan a separate data import if they need preserving.
 
-## Estrutura
+## Vercel
 
-```
-server/
-  index.js            arranque do servidor e encaminhamento dos pedidos
-  app.js              definição da app (nome, papéis, listas) — muda por app
-  config.js           variáveis de ambiente
-  core/               núcleo: base de dados, sessões, emails, ficheiros, validação
-  modules/core/       rotas do núcleo (contas, perfil, mensagens, documentos, admin)
-  migrations/         estrutura da base de dados (ficheiros .sql por ordem)
-client/
-  index.html
-  src/App.jsx         moldura da app, sessão e navegação
-  src/auth/           entrar, criar conta, recuperar código
-  src/pages/          Início, Notificações, Documentos, Utilizadores, Perfil, Ajuda
-  src/ui/             peças reutilizáveis (ícones, logótipo LPJ, janelas, campos)
-scripts/              compilação e dados de demonstração
-test/                 testes automáticos da API
+Import the repository with its root as the Vercel Root Directory. `vercel.json` supplies the build command, `public` output, Node API function in `api/index.js`, API routing and SPA fallback. Choose Node 22.x in project settings.
+
+Add the variables above in Vercel's environment settings, also `NODE_ENV=production` and `TRUST_PROXY=1`. Set `SUPABASE_URL` for both build and runtime: the build uses its origin in the browser CSP. Set Preview variables separately if deploying previews. Redeploy after changing variables. No persistent filesystem or background interval is required. Email delivery is awaited before the API responds.
+
+No deployment, remote schema change or demo seed is performed by building. Verify login, photo upload, document upload/download, logout and deep links on a preview before production.
+
+## Demo seed
+
+```sh
+npm run seed:demo
 ```
 
-## Próximo passo
+Uses `DATABASE_URL` and Storage; no SQLite. It takes a database transaction/advisory lock, refuses to add demo data when any user exists, and does not delete records. `--force` is no longer supported. Use a demo project: demo users have known PINs printed by the script. Optional `DEMO_DOCS` points to local sample PDFs. Database changes roll back on failure; Storage uploads are separate and may require cleanup after an interrupted seed.
 
-Módulo **C.Arbitragem**: torneios (com e sem nomeação do CA), vários torneios de uma vez e importação do Excel, disponibilidades, propostas e nomeações, convocatórias, avaliações, caderneta com exportação para Excel, pesquisa de árbitros e torneios.
+## Validation
 
----
-© LPJ Sports · www.lpjsports.pt
+```sh
+npm test
+npm run build
+# Optional: point only at a dedicated test Postgres database:
+TEST_DATABASE_URL='...' npm run test:postgres
+```
+
+The API tests call the handler without listening on a network port, using an asynchronous SQLite test double and mocked Storage. They cover route behavior, permissions, signed receipts and async results; they do not prove compatibility with the existing Supabase schema. The opt-in Postgres test creates a random isolated schema and removes that schema afterwards, checking generated IDs, parameter binding, conflict handling, transactions and rollback. It never uses application tables.
+
+Remaining operational consideration: the IP rate limiter is per instance. Account lockouts are persisted in Postgres, but a shared/distributed rate limiter is advisable for high-traffic public deployments.

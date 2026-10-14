@@ -15,6 +15,10 @@ if (existsSync(envFile)) {
 const env = process.env;
 
 export const config = {
+  databaseUrl: env.DATABASE_URL || '',
+  supabaseUrl: (env.SUPABASE_URL || '').replace(/\/$/, ''),
+  storageKey: env.SUPABASE_SERVICE_ROLE_KEY || '',
+  storageBuckets: { photos: env.SUPABASE_PHOTOS_BUCKET || 'photos', docs: env.SUPABASE_DOCUMENTS_BUCKET || 'documents' },
   port: Number(env.PORT) || 3000,
   host: env.HOST || '0.0.0.0',
   dataDir: resolve(env.DATA_DIR || './data'),
@@ -22,7 +26,7 @@ export const config = {
   production: env.NODE_ENV === 'production',
   publicUrl: (env.PUBLIC_URL || 'http://localhost:3000').replace(/\/$/, ''),
   // Atrás de um proxy (Render, Railway, Nginx…) o IP real vem em X-Forwarded-For.
-  trustProxy: env.TRUST_PROXY === '1',
+  trustProxy: env.TRUST_PROXY === '1' || env.VERCEL === '1',
   sessionDays: Number(env.SESSION_DAYS) || 30,
   mail: {
     brevoKey: env.BREVO_API_KEY || '',

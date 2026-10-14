@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { config } from './config.js';
 import { APP, hasRole, adminRole } from './app.js';
-import { openDb, migrate, now } from './core/db.js';
+import { openDb, now } from './core/db.js';
 import { createRouter } from './core/router.js';
 import { HttpError, readJson, sendJson, serveStatic, unauthorized, forbidden, SECURITY_HEADERS } from './core/http.js';
 import { loadSession, clientIp, hashPin } from './core/auth.js';
@@ -12,15 +12,14 @@ import { createMailer } from './core/mail.js';
 import { createNotifier } from './core/notify.js';
 import { registerCoreRoutes, HANDLED } from './modules/core/routes.js';
 
-export function createApp({ dbFile = join(config.dataDir, 'app.db'), fetchImpl } = {}) {
-  const db = openDb(dbFile);
-  migrate(db);
+export async function createApp({ databaseUrl = config.databaseUrl, db: providedDb, fetchImpl } = {}) {
+  const db = providedDb || openDb(databaseUrl);
   const mailer = createMailer(db, { fetchImpl });
   const notify = createNotifier(db, mailer);
-  const audit = (userId, action, target = null, details = null, ip = null) =>
-    db.run('INSERT INTO audit (user_id, action, target, details, ip, created_at) VALUES (?, ?, ?, ?, ?, ?)', userId, action, target, details, ip, now());
+  const audit = async (userId, action, target = null, details = null, ip = null) =>
+    (await db.run('INSERT INTO audit (user_id, action, target, details, ip, created_at) VALUES (?, ?, ?, ?, ?, ?)', userId, action, target, details, ip, now()));
 
-  ensureFirstAdmin(db);
+  try { await ensureFirstAdmin(db); } catch (error) { await db.close(); throw error; }
 
   const router = createRouter();
   const ctx = { db, mailer, notify, audit };
@@ -45,7 +44,7 @@ export function createApp({ dbFile = join(config.dataDir, 'app.db'), fetchImpl }
       const { route, params } = found;
       // Proteção contra pedidos vindos de outros sites: os pedidos que alteram dados têm de trazer este cabeçalho.
       if (!['GET', 'HEAD'].includes(req.method) && req.headers['x-lpj'] !== '1') throw forbidden('Pedido recusado.');
-      const session = loadSession(db, req);
+      const session = (await loadSession(db, req));
       if (route.access !== 'public') {
         if (!session) throw unauthorized();
         if (route.access !== 'user' && !hasRole(session.user, route.access)) throw forbidden();
@@ -60,7 +59,7 @@ export function createApp({ dbFile = join(config.dataDir, 'app.db'), fetchImpl }
       if (out === HANDLED) return;
       sendJson(res, 200, out ?? { ok: true }, cookies.length ? { 'Set-Cookie': cookies } : {});
     } catch (e) {
-      if (!(e instanceof HttpError)) console.error('[erro]', req.method, url.pathname, e);
+      if (!(e instanceof HttpError)) console.error('[erro]', req.method, url.pathname, e.code || 'internal');
       const status = e instanceof HttpError ? e.status : 500;
       const message = e instanceof HttpError ? e.message : 'Ocorreu um erro inesperado. Tenta de novo.';
       if (!res.headersSent) sendJson(res, status, { error: message, ...(e.extra || {}) }, cookies.length ? { 'Set-Cookie': cookies } : {});
@@ -68,34 +67,30 @@ export function createApp({ dbFile = join(config.dataDir, 'app.db'), fetchImpl }
     }
   }
 
-  // Limpeza periódica: sessões expiradas e códigos de reposição antigos.
-  const timer = setInterval(() => {
-    db.run('DELETE FROM sessions WHERE expires_at < ?', now());
-    db.run('DELETE FROM pin_resets WHERE expires_at < ?', new Date(Date.now() - 86400000).toISOString());
-  }, 3600000);
-  timer.unref();
-
   const server = http.createServer((req, res) => { handle(req, res); });
-  server.on('close', () => { clearInterval(timer); db.close(); });
-  return { server, db, mailer, notify };
+  server.on('close', async () => { void (await db.close()); });
+  return { server, handle, db, mailer, notify };
 }
 
 // Primeira conta de administrador a partir de ADMIN_NAME, ADMIN_EMAIL e ADMIN_PIN.
-function ensureFirstAdmin(db) {
-  if (db.get('SELECT id FROM users LIMIT 1')) return;
+async function ensureFirstAdmin(db) {
+  return db.tx(async () => {
+    await db.exec("SELECT pg_advisory_xact_lock(hashtext('lpj-bootstrap'))");
+  if ((await db.get('SELECT id FROM users LIMIT 1'))) return;
   const { name, email, pin } = config.admin;
   if (!name || !email || !/^\d{4}$/.test(pin)) {
     console.log('[arranque] Base de dados vazia. Define ADMIN_NAME, ADMIN_EMAIL e ADMIN_PIN (4 algarismos) para criar o primeiro administrador.');
     return;
   }
   const t = now();
-  db.run(`INSERT INTO users (name, email, role, status, pin_hash, consent_at, created_at, updated_at) VALUES (?, ?, ?, 'ativo', ?, ?, ?, ?)`,
-    name, email.toLowerCase(), adminRole(), hashPin(pin), t, t, t);
-  console.log(`[arranque] Administrador criado: ${email}`);
+  (await db.run(`INSERT INTO users (name, email, role, status, pin_hash, consent_at, created_at, updated_at) VALUES (?, ?, ?, 'ativo', ?, ?, ?, ?)`,
+    name, email.toLowerCase(), adminRole(), hashPin(pin), t, t, t));
+  console.log('[arranque] Administrador criado.');
+  });
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
-  const { server } = createApp();
+  const { server } = (await createApp());
   server.listen(config.port, config.host, () => {
     console.log(`${APP.name} a correr em ${config.publicUrl} (porta ${config.port})`);
   });

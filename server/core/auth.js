@@ -28,11 +28,11 @@ export const weakPin = (p) => /^(\d)\1{3}$/.test(p) || ['1234', '4321', '0123', 
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
-export function createSession(db, userId, req) {
+export async function createSession(db, userId, req) {
   const token = randomBytes(32).toString('base64url');
   const exp = new Date(Date.now() + config.sessionDays * 86400000).toISOString();
-  db.run('INSERT INTO sessions (id, user_id, created_at, expires_at, ip, ua) VALUES (?, ?, ?, ?, ?, ?)',
-    sha(token), userId, now(), exp, clientIp(req), String(req.headers['user-agent'] || '').slice(0, 200));
+  (await db.run('INSERT INTO sessions (id, user_id, created_at, expires_at, ip, ua) VALUES (?, ?, ?, ?, ?, ?)',
+    sha(token), userId, now(), exp, clientIp(req), String(req.headers['user-agent'] || '').slice(0, 200)));
   return token;
 }
 
@@ -55,23 +55,23 @@ export function clientIp(req) {
 }
 
 // Lê a sessão do cookie. Devolve { user, sid } ou null. Prolonga a sessão se estiver a meio da validade.
-export function loadSession(db, req) {
+export async function loadSession(db, req) {
   const token = parseCookies(req)[COOKIE];
   if (!token) return null;
   const sid = sha(token);
-  const row = db.get('SELECT s.id AS sid, s.expires_at, u.* FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.id = ?', sid);
+  const row = (await db.get('SELECT s.id AS sid, s.expires_at, u.* FROM sessions s JOIN users u ON u.id = s.user_id WHERE s.id = ?', sid));
   if (!row) return null;
   if (row.expires_at < now()) {
-    db.run('DELETE FROM sessions WHERE id = ?', sid);
+    (await db.run('DELETE FROM sessions WHERE id = ?', sid));
     return null;
   }
   if (row.status !== 'ativo') {
-    db.run('DELETE FROM sessions WHERE user_id = ?', row.id);
+    (await db.run('DELETE FROM sessions WHERE user_id = ?', row.id));
     return null;
   }
   const half = Date.now() + (config.sessionDays * 86400000) / 2;
   if (new Date(row.expires_at).getTime() < half) {
-    db.run('UPDATE sessions SET expires_at = ? WHERE id = ?', new Date(Date.now() + config.sessionDays * 86400000).toISOString(), sid);
+    (await db.run('UPDATE sessions SET expires_at = ? WHERE id = ?', new Date(Date.now() + config.sessionDays * 86400000).toISOString(), sid));
   }
   const { sid: _s, expires_at: _e, ...user } = row;
   return { user, sid };

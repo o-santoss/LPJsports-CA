@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { get, post, put, del, fileToDataUrl } from '../lib/api.js';
+import { get, post, put, del } from '../lib/api.js';
 import { fdate, fsize, norm, plural } from '../lib/fmt.js';
 import { useApp } from '../App.jsx';
 import { useUI, Icon, Chip, Empty, Field, useBusy } from '../ui/kit.jsx';
@@ -72,7 +72,10 @@ function DocForm({ doc, close, onSaved }) {
       const body = { ...f };
       if (f.kind === 'file' && file) {
         if (file.size > 15 * 1048576) return ui.toast('O ficheiro tem mais de 15 MB.');
-        body.file = { name: file.name, data: await fileToDataUrl(file) };
+        const upload = await post('/api/documents/upload', { name: file.name, size: file.size });
+        const result = await fetch(upload.uploadUrl, { method: 'PUT', headers: { 'Content-Type': file.type || 'application/octet-stream' }, body: file });
+        if (!result.ok) throw new Error('Não foi possível enviar o ficheiro.');
+        body.file = { name: file.name, receipt: upload.receipt };
       }
       if (doc) await put(`/api/documents/${doc.id}`, body); else await post('/api/documents', body);
       ui.toast(doc ? 'Documento atualizado.' : 'Documento publicado.');

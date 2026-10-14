@@ -9,10 +9,10 @@ export const signature = () =>
 
 export function createMailer(db, { fetchImpl = globalThis.fetch } = {}) {
   async function deliver(id) {
-    const row = db.get('SELECT * FROM emails WHERE id = ?', id);
+    const row = (await db.get('SELECT * FROM emails WHERE id = ?', id));
     if (!row || row.status !== 'pendente') return;
     if (!config.mail.brevoKey || !config.mail.from) {
-      db.run("UPDATE emails SET status = 'simulado', sent_at = ? WHERE id = ?", now(), id);
+      (await db.run("UPDATE emails SET status = 'simulado', sent_at = ? WHERE id = ?", now(), id));
       if (!config.production && process.env.LOG_EMAILS !== '0') {
         console.log(`[email simulado] para ${fromJson(row.to_json, []).map((t) => t.email).join(', ')} · ${row.subject}`);
       }
@@ -32,32 +32,32 @@ export function createMailer(db, { fetchImpl = globalThis.fetch } = {}) {
         }),
       });
       if (!res.ok) throw new Error(`Brevo ${res.status}: ${(await res.text()).slice(0, 300)}`);
-      db.run("UPDATE emails SET status = 'enviado', sent_at = ?, error = NULL WHERE id = ?", now(), id);
+      (await db.run("UPDATE emails SET status = 'enviado', sent_at = ?, error = NULL WHERE id = ?", now(), id));
     } catch (e) {
-      db.run("UPDATE emails SET status = 'erro', error = ? WHERE id = ?", String(e.message || e).slice(0, 500), id);
+      (await db.run("UPDATE emails SET status = 'erro', error = ? WHERE id = ?", String(e.message || e).slice(0, 500), id));
       console.error('[email] erro ao enviar', id, e.message);
     }
   }
 
   return {
     // to: [{ email, name }]. Cada destinatário recebe o seu email (os endereços não ficam à vista dos outros).
-    queue({ type, to, cc = [], subject, body }) {
+    async queue({ type, to, cc = [], subject, body }) {
       const ids = [];
       for (const r of to) {
         if (!r?.email) continue;
-        const { id } = db.run(
+        const { id } = (await db.run(
           'INSERT INTO emails (type, to_json, cc_json, subject, body, created_at) VALUES (?, ?, ?, ?, ?, ?)',
-          type, toJson([{ email: r.email, name: r.name || '' }]), toJson(cc), subject, body + signature(), now());
+          type, toJson([{ email: r.email, name: r.name || '' }]), toJson(cc), subject, body + signature(), now()));
         ids.push(id);
       }
-      setImmediate(() => ids.forEach((id) => deliver(id)));
+      for (const id of ids) await deliver(id);
       return ids;
     },
     deliver,
     // Volta a tentar os emails que falharam (pode ser chamado de hora a hora).
-    retryFailed() {
-      const rows = db.all("SELECT id FROM emails WHERE status = 'erro' AND created_at > ?", new Date(Date.now() - 86400000).toISOString());
-      rows.forEach((r) => { db.run("UPDATE emails SET status = 'pendente' WHERE id = ?", r.id); deliver(r.id); });
+    async retryFailed() {
+      const rows = (await db.all("SELECT id FROM emails WHERE status = 'erro' AND created_at > ?", new Date(Date.now() - 86400000).toISOString()));
+      for (const r of rows) { (await db.run("UPDATE emails SET status = 'pendente' WHERE id = ?", r.id)); await deliver(r.id); }
       return rows.length;
     },
   };

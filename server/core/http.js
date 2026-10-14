@@ -1,4 +1,5 @@
 // Utilitários HTTP: erros, leitura de JSON, cookies, cabeçalhos de segurança e ficheiros estáticos.
+import { config } from '../config.js';
 import { createReadStream, statSync } from 'node:fs';
 import { extname, join, normalize, sep } from 'node:path';
 
@@ -56,6 +57,13 @@ export function readBody(req, limit) {
 }
 
 export async function readJson(req, limit = 1024 * 1024) {
+  // Vercel may already have parsed the request body.
+  if (req.body !== undefined) {
+    const encoded = Buffer.isBuffer(req.body) ? req.body : Buffer.from(typeof req.body === 'string' ? req.body : JSON.stringify(req.body));
+    if (encoded.length > limit) throw new HttpError(413, 'O pedido é demasiado grande.');
+    try { const value = JSON.parse(encoded.toString()); return value && typeof value === 'object' ? value : {}; }
+    catch { throw badRequest('Pedido inválido.'); }
+  }
   const buf = await readBody(req, limit);
   if (!buf.length) return {};
   try {
@@ -77,7 +85,7 @@ export const SECURITY_HEADERS = {
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "font-src 'self' https://fonts.gstatic.com",
     "script-src 'self'",
-    "connect-src 'self'",
+    `connect-src 'self' ${config.supabaseUrl ? new URL(config.supabaseUrl).origin : ''}`,
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",

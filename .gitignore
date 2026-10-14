@@ -4,3 +4,9 @@ data/
 .env
 *.log
 .DS_Store
+
+.env.*
+!.env.example
+.vercel/
+*.pem
+*.key
