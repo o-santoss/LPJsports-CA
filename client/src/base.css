@@ -11,3 +11,9 @@ a.btn{text-decoration:none}
 .sh-body{padding-bottom:4px}
 .card.mt{margin-top:16px}
 .toolbar .inp.search{flex:1 1 240px}
+/* Arbitration screens use the original prototype's design tokens. */
+.tour-button{text-align:left;font:inherit;color:inherit;cursor:pointer;width:100%}
+button.stat{font:inherit;color:inherit;text-align:left;border:1px solid var(--line);cursor:pointer}
+.arb-compact .ph{margin-top:20px}.span2{grid-column:1/-1}.arb-batch input,.arb-batch select{min-width:120px}.arb-batch td{vertical-align:top}.arb-error{color:var(--bad);font-size:12px;display:block}
+@media(min-width:880px){.nav .nv-more{display:none!important}.nav .nv-x{display:flex!important}}
+@media(max-width:879px){.nav .nv-x{display:none!important}.nav .nv-more{display:flex!important}}

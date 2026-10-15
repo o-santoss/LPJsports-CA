@@ -1,5 +1,7 @@
 // Rotas do núcleo: entrar/sair, registo, recuperação de código, perfil, utilizadores,
 // mensagens, documentos e registos (emails e ações).
+import { loadState } from '../arbitration/routes.js';
+import { qualification } from '../arbitration/engine.js';
 import { randomBytes } from 'node:crypto';
 import { now, toJson, fromJson } from '../../core/db.js';
 import { badRequest, forbidden, notFound, conflict, sendFile, HttpError } from '../../core/http.js';
@@ -88,7 +90,7 @@ export function registerCoreRoutes(r, { db, notify, audit }) {
     if (weakPin(pin)) throw badRequest('Esse código é demasiado fácil de adivinhar. Escolhe outro.');
     if (pin !== String(b.pin2 ?? '')) throw badRequest('Os dois códigos não são iguais.');
     if (!b.consent) throw badRequest('Para criar conta tens de autorizar o tratamento dos dados.');
-    const extra = v.extraObj(b.extra);
+    const extra = b.extra?.funcs ? qualification(b.extra) : {};
     const t = now();
     const { id } = (await db.run(`INSERT INTO users (name, email, phone, role, status, pin_hash, region, assoc, licence, extra, consent_at, created_at, updated_at)
       VALUES (?, ?, ?, ?, 'pendente', ?, ?, ?, ?, ?, ?, ?, ?)`,
@@ -159,7 +161,8 @@ export function registerCoreRoutes(r, { db, notify, audit }) {
     if (email !== me.email && (await db.get('SELECT id FROM users WHERE email = ? AND id <> ?', email, me.id))) {
       throw conflict('Esse email já está a ser usado noutra conta.');
     }
-    const extra = { ...fromJson(me.extra, {}), ...(b.extra ? v.extraObj(b.extra) : {}) };
+    // Qualifications are edited exclusively via the CA-only domain command.
+    const extra = fromJson(me.extra, {});
     (await db.run(`UPDATE users SET name = ?, email = ?, phone = ?, region = ?, assoc = ?, addr = ?, postal = ?, tel = ?, birth = ?,
       notif_conf = ?, notif_msg = ?, extra = ?, updated_at = ? WHERE id = ?`,
       b.name !== undefined ? v.fullName(b.name) : me.name,
@@ -211,7 +214,10 @@ export function registerCoreRoutes(r, { db, notify, audit }) {
     const messages = (await db.all(`SELECT m.subject, m.body, m.created_at, mt.read_at FROM message_to mt JOIN messages m ON m.id = mt.message_id
       WHERE mt.user_id = ? ORDER BY m.id`, c.user.id));
     const sent = (await db.all('SELECT subject, body, created_at FROM messages WHERE from_id = ? ORDER BY id', c.user.id));
-    const data = { exportadoEm: now(), app: APP.name, perfil: me, mensagensRecebidas: messages, mensagensEnviadas: sent };
+    const domain=await loadState(db);
+    const person=domain.users.find(u=>u.id===c.user.id);
+    const arbitragem={qualificacoes:{funcs:person?.funcs,lv:person?.lv,courses:person?.courses,recNext:person?.recNext},disponibilidades:domain.avail.filter(a=>a.u===c.user.id),nomeacoes:domain.noms.filter(n=>n.u===c.user.id),avaliacoes:domain.evals.filter(e=>e.u===c.user.id&&e.status==='validada'),caderneta:domain.cad.filter(e=>e.u===c.user.id)};
+    const data = { arbitragem, exportadoEm: now(), app: APP.name, perfil: me, mensagensRecebidas: messages, mensagensEnviadas: sent };
     c.res.writeHead(200, {
       'Content-Type': 'application/json; charset=utf-8',
       'Content-Disposition': `attachment; filename="os-meus-dados-${APP.key}.json"`,
@@ -249,7 +255,7 @@ export function registerCoreRoutes(r, { db, notify, audit }) {
     postal: b.postal !== undefined ? v.str(b.postal, 80) : prev.postal ?? '',
     tel: b.tel !== undefined ? v.str(b.tel, 30) : prev.tel ?? '',
     birth: b.birth !== undefined ? v.date(b.birth) : prev.birth ?? '',
-    extra: b.extra !== undefined ? toJson({ ...fromJson(prev.extra, {}), ...v.extraObj(b.extra) }) : prev.extra ?? '{}',
+    extra: prev.extra ?? '{}',
   });
 
   r.post('/api/users', async (c) => {

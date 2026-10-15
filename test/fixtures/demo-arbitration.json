@@ -1,0 +1,5903 @@
+{
+  "users": [
+    {
+      "id": "ca1",
+      "name": "Teresa Antunes",
+      "profile": "ca",
+      "region": "Lisboa",
+      "funcs": [
+        "JA",
+        "SUP",
+        "CHEFE"
+      ],
+      "lv": {
+        "A": "",
+        "J": "Nível 3 FPT",
+        "C": "",
+        "S": "Silver Badge"
+      },
+      "email": "ca1@example.test",
+      "phone": "995 223 257",
+      "licence": "FPT-49097",
+      "pin": "3690",
+      "status": "ativo",
+      "created": "2025-06-16T03:10:57.634Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "",
+      "birth": "",
+      "recNext": "2027-04-05",
+      "courses": [
+        {
+          "id": "k_1",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2017-11-15",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_2",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2020-01-04",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_3",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-04-06",
+          "place": "Online"
+        },
+        {
+          "id": "k_4",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-04-05",
+          "place": "CT Porto, Porto"
+        }
+      ]
+    },
+    {
+      "id": "ca2",
+      "name": "Pedro Vasconcelos",
+      "profile": "ca",
+      "region": "Norte",
+      "funcs": [
+        "JA",
+        "SUP",
+        "CHEFE",
+        "CAD"
+      ],
+      "lv": {
+        "A": "Bronze Badge",
+        "J": "Nível 3 FPT",
+        "C": "Internacional",
+        "S": "White Badge"
+      },
+      "email": "ca2@example.test",
+      "phone": "946 703 093",
+      "licence": "FPT-80089",
+      "pin": "7567",
+      "status": "ativo",
+      "created": "2025-02-23T15:05:45.707Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "",
+      "birth": "",
+      "recNext": "2027-09-23",
+      "courses": [
+        {
+          "id": "k_5",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2017-09-23",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_6",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2018-12-11",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_7",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2019-09-02",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_8",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-09-24",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_9",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-09-23",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "ja1",
+      "name": "Miguel Santos",
+      "profile": "ja",
+      "region": "Lisboa",
+      "funcs": [
+        "JA",
+        "SUP",
+        "CHEFE",
+        "CAD"
+      ],
+      "lv": {
+        "A": "Nível 3 FPT",
+        "J": "Nível 3 FPT",
+        "C": "Nacional",
+        "S": "White Badge"
+      },
+      "email": "ja1@example.test",
+      "phone": "958 405 867",
+      "licence": "FPT-58409",
+      "pin": "1470",
+      "status": "ativo",
+      "created": "2025-08-18T16:40:40.753Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "Avenida da República, 120, 5.º Esq.",
+      "postal": "1050-196 Lisboa",
+      "tel": "21 000 0000",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "1982-09-03",
+      "recNext": "2028-08-05",
+      "courses": [
+        {
+          "id": "k_10",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2022-06-26",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_11",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2023-05-24",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_12",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2024-03-23",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_13",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-08-06",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_14",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-08-06",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "ja2",
+      "name": "Sofia Barros",
+      "profile": "ja",
+      "region": "Norte",
+      "funcs": [
+        "JA",
+        "CAD"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "Nível 2 FPT",
+        "C": "",
+        "S": ""
+      },
+      "email": "ja2@example.test",
+      "phone": "946 314 964",
+      "licence": "FPT-15753",
+      "pin": "1820",
+      "status": "ativo",
+      "created": "2026-01-27T05:34:05.542Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Porto",
+      "birth": "",
+      "recNext": "2026-12-24",
+      "courses": [
+        {
+          "id": "k_15",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2018-10-26",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_16",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2019-09-22",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_17",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-12-25",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_18",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-12-24",
+          "place": "CT Porto, Porto"
+        }
+      ]
+    },
+    {
+      "id": "ja3",
+      "name": "Henrique Pires",
+      "profile": "ja",
+      "region": "Centro",
+      "funcs": [
+        "CHEFE",
+        "JA",
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "White Badge",
+        "J": "Nível 3 FPT",
+        "C": "White Badge",
+        "S": ""
+      },
+      "email": "ja3@example.test",
+      "phone": "996 261 253",
+      "licence": "FPT-17680",
+      "pin": "7513",
+      "status": "ativo",
+      "created": "2025-10-20T02:21:09.485Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Coimbra",
+      "birth": "",
+      "recNext": "2028-02-20",
+      "courses": [
+        {
+          "id": "k_19",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2021-08-08",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_20",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2022-10-09",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_21",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2023-12-01",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_22",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-02-21",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_23",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-02-20",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        }
+      ]
+    },
+    {
+      "id": "ja4",
+      "name": "Cláudia Reis",
+      "profile": "ja",
+      "region": "Madeira",
+      "funcs": [
+        "JA",
+        "SUP",
+        "CAD"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "Nível 2 FPT",
+        "C": "",
+        "S": "White Badge"
+      },
+      "email": "ja4@example.test",
+      "phone": "956 770 785",
+      "licence": "FPT-34867",
+      "pin": "3556",
+      "status": "ativo",
+      "created": "2026-02-01T05:38:21.423Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis da Madeira",
+      "birth": "",
+      "recNext": "2028-01-08",
+      "courses": [
+        {
+          "id": "k_24",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2022-04-06",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_25",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2023-03-15",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_26",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2024-08-15",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_27",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-01-09",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_28",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-01-08",
+          "place": "CT Porto, Porto"
+        }
+      ]
+    },
+    {
+      "id": "a1",
+      "name": "Ana Rodrigues",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a1@example.test",
+      "phone": "991 925 140",
+      "licence": "FPT-94090",
+      "pin": "2580",
+      "status": "ativo",
+      "created": "2025-08-04T07:57:41.687Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "Rua das Amoreiras, 45, 3.º Dto.",
+      "postal": "1250-021 Lisboa",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "1991-04-12",
+      "recNext": "2028-05-29",
+      "courses": [
+        {
+          "id": "k_29",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2019-01-26",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_30",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-05-30",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_31",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-05-30",
+          "place": "Online"
+        }
+      ]
+    },
+    {
+      "id": "a2",
+      "name": "Bruno Costa",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "JA",
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "Nível 1 FPT",
+        "C": "",
+        "S": ""
+      },
+      "email": "a2@example.test",
+      "phone": "916 103 809",
+      "licence": "FPT-70447",
+      "pin": "3762",
+      "status": "ativo",
+      "created": "2025-09-02T00:43:43.035Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2028-02-12",
+      "courses": [
+        {
+          "id": "k_32",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2019-08-24",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_33",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2020-07-23",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_34",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-02-13",
+          "place": "Online"
+        },
+        {
+          "id": "k_35",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-02-12",
+          "place": "CT Funchal, Funchal"
+        }
+      ]
+    },
+    {
+      "id": "a3",
+      "name": "Carla Mendes",
+      "profile": "arb",
+      "region": "Norte",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a3@example.test",
+      "phone": "977 362 512",
+      "licence": "FPT-99963",
+      "pin": "3417",
+      "status": "ativo",
+      "created": "2025-11-01T11:28:24.472Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Porto",
+      "birth": "",
+      "recNext": "2026-09-25",
+      "courses": [
+        {
+          "id": "k_36",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2021-04-11",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_37",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-09-26",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_38",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-09-25",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a4",
+      "name": "Daniel Sousa",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "White Badge",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a4@example.test",
+      "phone": "960 854 844",
+      "licence": "FPT-73603",
+      "pin": "3601",
+      "status": "ativo",
+      "created": "2025-09-29T14:58:03.224Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2027-02-03",
+      "courses": [
+        {
+          "id": "k_39",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2021-05-02",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_40",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2023-05-12",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_41",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-02-04",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_42",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-02-03",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a5",
+      "name": "Eduarda Pinto",
+      "profile": "arb",
+      "region": "Norte",
+      "funcs": [
+        "JA",
+        "CAD"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "Nível 1 FPT",
+        "C": "",
+        "S": ""
+      },
+      "email": "a5@example.test",
+      "phone": "947 679 778",
+      "licence": "FPT-49560",
+      "pin": "7419",
+      "status": "ativo",
+      "created": "2026-02-08T04:59:33.576Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Porto",
+      "birth": "",
+      "recNext": "2027-01-17",
+      "courses": [
+        {
+          "id": "k_43",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2023-08-31",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_44",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2024-10-12",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_45",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-01-17",
+          "place": "CT Porto, Porto"
+        }
+      ]
+    },
+    {
+      "id": "a6",
+      "name": "Filipe Gomes",
+      "profile": "arb",
+      "region": "Algarve",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a6@example.test",
+      "phone": "998 904 042",
+      "licence": "FPT-92978",
+      "pin": "4512",
+      "status": "ativo",
+      "created": "2026-03-05T01:19:51.182Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Algarve",
+      "birth": "",
+      "recNext": "2028-03-17",
+      "courses": [
+        {
+          "id": "k_46",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2017-07-18",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_47",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-03-18",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_48",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-03-18",
+          "place": "Online"
+        }
+      ]
+    },
+    {
+      "id": "a7",
+      "name": "Gonçalo Martins",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "CAD"
+      ],
+      "lv": {
+        "A": "Bronze Badge",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a7@example.test",
+      "phone": "927 985 775",
+      "licence": "FPT-28142",
+      "pin": "5528",
+      "status": "ativo",
+      "created": "2025-12-27T23:25:43.945Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2027-04-16",
+      "courses": [
+        {
+          "id": "k_49",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2021-04-11",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_50",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2023-02-05",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_51",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-04-17",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_52",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-04-16",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a8",
+      "name": "Helena Fernandes",
+      "profile": "arb",
+      "region": "Centro",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a8@example.test",
+      "phone": "925 471 582",
+      "licence": "FPT-15031",
+      "pin": "2156",
+      "status": "ativo",
+      "created": "2025-05-24T02:39:41.245Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Coimbra",
+      "birth": "",
+      "recNext": "2026-11-29",
+      "courses": [
+        {
+          "id": "k_53",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2017-03-18",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_54",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-11-30",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_55",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-11-29",
+          "place": "CT Funchal, Funchal"
+        }
+      ]
+    },
+    {
+      "id": "a9",
+      "name": "Inês Carvalho",
+      "profile": "arb",
+      "region": "Madeira",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a9@example.test",
+      "phone": "989 887 642",
+      "licence": "FPT-98614",
+      "pin": "3010",
+      "status": "ativo",
+      "created": "2025-04-13T09:52:47.416Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis da Madeira",
+      "birth": "",
+      "recNext": "2026-12-23",
+      "courses": [
+        {
+          "id": "k_56",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2022-05-19",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_57",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-12-24",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_58",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-12-23",
+          "place": "Online"
+        }
+      ]
+    },
+    {
+      "id": "a10",
+      "name": "João Teixeira",
+      "profile": "arb",
+      "region": "Centro",
+      "funcs": [
+        "JA",
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "Nível 1 FPT",
+        "C": "",
+        "S": ""
+      },
+      "email": "a10@example.test",
+      "phone": "984 512 118",
+      "licence": "FPT-45131",
+      "pin": "9464",
+      "status": "ativo",
+      "created": "2025-09-14T05:30:54.920Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Coimbra",
+      "birth": "",
+      "recNext": "2026-12-11",
+      "courses": [
+        {
+          "id": "k_59",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2020-03-06",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_60",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-12-12",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_61",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-12-11",
+          "place": "CT Porto, Porto"
+        }
+      ]
+    },
+    {
+      "id": "a11",
+      "name": "Laura Moreira",
+      "profile": "arb",
+      "region": "Norte",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a11@example.test",
+      "phone": "988 263 946",
+      "licence": "FPT-49278",
+      "pin": "2876",
+      "status": "ativo",
+      "created": "2025-10-08T21:13:57.653Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Porto",
+      "birth": "",
+      "recNext": "2027-03-30",
+      "courses": [
+        {
+          "id": "k_62",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2021-04-24",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_63",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-03-31",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_64",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-03-30",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a12",
+      "name": "Marco Lopes",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 3 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a12@example.test",
+      "phone": "966 218 375",
+      "licence": "FPT-22120",
+      "pin": "6489",
+      "status": "ativo",
+      "created": "2025-05-11T20:00:57.665Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2027-09-28",
+      "courses": [
+        {
+          "id": "k_65",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2019-09-15",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_66",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-09-29",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_67",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-09-28",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a13",
+      "name": "Rita Almeida",
+      "profile": "arb",
+      "region": "Açores",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a13@example.test",
+      "phone": "975 840 228",
+      "licence": "FPT-44639",
+      "pin": "3060",
+      "status": "ativo",
+      "created": "2026-03-09T21:55:37.857Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis dos Açores",
+      "birth": "",
+      "recNext": "2027-06-18",
+      "courses": [
+        {
+          "id": "k_68",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2020-07-05",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_69",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-06-19",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_70",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-06-18",
+          "place": "CT Porto, Porto"
+        }
+      ]
+    },
+    {
+      "id": "a14",
+      "name": "Sérgio Neves",
+      "profile": "arb",
+      "region": "Algarve",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a14@example.test",
+      "phone": "962 430 232",
+      "licence": "FPT-34740",
+      "pin": "7086",
+      "status": "ativo",
+      "created": "2026-02-11T05:07:26.994Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Algarve",
+      "birth": "",
+      "recNext": "2026-10-27",
+      "courses": [
+        {
+          "id": "k_71",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2021-08-29",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_72",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-10-28",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_73",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-10-27",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        }
+      ]
+    },
+    {
+      "id": "a15",
+      "name": "Tiago Ramos",
+      "profile": "arb",
+      "region": "Madeira",
+      "funcs": [
+        "JA",
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 2 FPT",
+        "J": "Nível 1 FPT",
+        "C": "",
+        "S": ""
+      },
+      "email": "a15@example.test",
+      "phone": "952 742 529",
+      "licence": "FPT-72058",
+      "pin": "5043",
+      "status": "ativo",
+      "created": "2025-05-03T14:15:40.279Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis da Madeira",
+      "birth": "",
+      "recNext": "2027-06-12",
+      "courses": [
+        {
+          "id": "k_74",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2022-09-26",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_75",
+          "type": "Curso",
+          "name": "Curso de Juiz-Árbitro Nível 1 FPT",
+          "date": "2023-11-02",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_76",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-06-13",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_77",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-06-12",
+          "place": "Online"
+        }
+      ]
+    },
+    {
+      "id": "a16",
+      "name": "Vera Correia",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "White Badge",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a16@example.test",
+      "phone": "939 241 710",
+      "licence": "FPT-18754",
+      "pin": "3825",
+      "status": "ativo",
+      "created": "2026-01-01T06:16:01.764Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2028-02-18",
+      "courses": [
+        {
+          "id": "k_78",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2021-04-30",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_79",
+          "type": "Curso",
+          "name": "Curso ITF Nível 2 (White Badge)",
+          "date": "2023-03-23",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_80",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-02-19",
+          "place": "Online"
+        },
+        {
+          "id": "k_81",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-02-18",
+          "place": "Online"
+        }
+      ]
+    },
+    {
+      "id": "a17",
+      "name": "Rui Batista",
+      "profile": "arb",
+      "region": "Norte",
+      "funcs": [
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a17@example.test",
+      "phone": "984 768 403",
+      "licence": "FPT-88706",
+      "pin": "9147",
+      "status": "ativo",
+      "created": "2025-04-28T07:30:55.158Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Porto",
+      "birth": "",
+      "recNext": "2027-05-09",
+      "courses": [
+        {
+          "id": "k_82",
+          "type": "Curso",
+          "name": "Curso de Juiz de Linha",
+          "date": "2023-07-11",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_83",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-05-09",
+          "place": "Online"
+        }
+      ]
+    },
+    {
+      "id": "a18",
+      "name": "Patrícia Lima",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a18@example.test",
+      "phone": "980 725 053",
+      "licence": "FPT-18540",
+      "pin": "4116",
+      "status": "ativo",
+      "created": "2025-03-19T05:37:41.653Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2027-11-09",
+      "courses": [
+        {
+          "id": "k_84",
+          "type": "Curso",
+          "name": "Curso de Juiz de Linha",
+          "date": "2017-04-24",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_85",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-11-10",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_86",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-11-09",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a19",
+      "name": "Hugo Ferreira",
+      "profile": "arb",
+      "region": "Norte",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a19@example.test",
+      "phone": "928 725 519",
+      "licence": "FPT-32992",
+      "pin": "2323",
+      "status": "ativo",
+      "created": "2025-05-24T22:07:44.583Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Porto",
+      "birth": "",
+      "recNext": "",
+      "courses": [
+        {
+          "id": "k_87",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2020-12-24",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a20",
+      "name": "Marta Cunha",
+      "profile": "arb",
+      "region": "Madeira",
+      "funcs": [
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a20@example.test",
+      "phone": "985 665 307",
+      "licence": "FPT-64077",
+      "pin": "8098",
+      "status": "ativo",
+      "created": "2025-07-16T21:11:50.075Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis da Madeira",
+      "birth": "",
+      "recNext": "2027-05-27",
+      "courses": [
+        {
+          "id": "k_88",
+          "type": "Curso",
+          "name": "Curso de Juiz de Linha",
+          "date": "2021-08-14",
+          "place": "CT Porto, Porto"
+        },
+        {
+          "id": "k_89",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-05-28",
+          "place": "Online"
+        },
+        {
+          "id": "k_90",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-05-27",
+          "place": "Online"
+        }
+      ]
+    },
+    {
+      "id": "a21",
+      "name": "Nélson Duarte",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a21@example.test",
+      "phone": "992 391 693",
+      "licence": "FPT-89008",
+      "pin": "4622",
+      "status": "ativo",
+      "created": "2025-10-23T14:17:57.083Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2026-10-10",
+      "courses": [
+        {
+          "id": "k_91",
+          "type": "Curso",
+          "name": "Curso de Juiz de Linha",
+          "date": "2021-05-30",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_92",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-10-11",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_93",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-10-10",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        }
+      ]
+    },
+    {
+      "id": "a22",
+      "name": "Joana Matos",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a22@example.test",
+      "phone": "961 978 242",
+      "licence": "FPT-90922",
+      "pin": "1669",
+      "status": "ativo",
+      "created": "2025-05-21T19:16:30.672Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2028-06-15",
+      "courses": [
+        {
+          "id": "k_94",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2023-10-03",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_95",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-06-16",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_96",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-06-16",
+          "place": "CT Coimbra, Coimbra"
+        }
+      ]
+    },
+    {
+      "id": "a23",
+      "name": "Tomás Vieira",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a23@example.test",
+      "phone": "994 562 833",
+      "licence": "FPT-39035",
+      "pin": "5005",
+      "status": "ativo",
+      "created": "2026-01-19T10:04:38.413Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2027-10-18",
+      "courses": [
+        {
+          "id": "k_97",
+          "type": "Curso",
+          "name": "Curso de Juiz de Linha",
+          "date": "2022-01-14",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_98",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2023-10-19",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_99",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2025-10-18",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        }
+      ]
+    },
+    {
+      "id": "a24",
+      "name": "Catarina Lobo",
+      "profile": "arb",
+      "region": "Lisboa",
+      "funcs": [
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "a24@example.test",
+      "phone": "951 328 950",
+      "licence": "FPT-32095",
+      "pin": "5094",
+      "status": "ativo",
+      "created": "2026-01-05T07:53:37.401Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis de Lisboa",
+      "birth": "",
+      "recNext": "2026-11-15",
+      "courses": [
+        {
+          "id": "k_100",
+          "type": "Curso",
+          "name": "Curso de Juiz de Linha",
+          "date": "2019-02-22",
+          "place": "CT Funchal, Funchal"
+        },
+        {
+          "id": "k_101",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2022-11-16",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_102",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-11-15",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        }
+      ]
+    },
+    {
+      "id": "r1",
+      "name": "Rafael Gouveia",
+      "profile": "arb",
+      "region": "Madeira",
+      "funcs": [
+        "LIN"
+      ],
+      "lv": {
+        "A": "",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "r1@example.test",
+      "phone": "999 333 562",
+      "licence": "FPT-47318",
+      "pin": "4826",
+      "status": "pendente",
+      "created": "2026-10-14T00:09:30.223Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis da Madeira",
+      "birth": "",
+      "recNext": "",
+      "courses": [
+        {
+          "id": "k_103",
+          "type": "Curso",
+          "name": "Curso de Juiz de Linha",
+          "date": "2020-01-27",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "name": "Sara Pacheco",
+      "profile": "arb",
+      "region": "Norte",
+      "funcs": [
+        "CAD",
+        "LIN"
+      ],
+      "lv": {
+        "A": "Nível 1 FPT",
+        "J": "",
+        "C": "",
+        "S": ""
+      },
+      "email": "r2@example.test",
+      "phone": "936 470 134",
+      "licence": "FPT-73509",
+      "pin": "5023",
+      "status": "pendente",
+      "created": "2026-10-13T16:37:10.899Z",
+      "notif": {
+        "conf": true,
+        "msg": true
+      },
+      "fails": 0,
+      "lockUntil": 0,
+      "addr": "",
+      "postal": "",
+      "tel": "",
+      "assoc": "Associação de Ténis do Porto",
+      "birth": "",
+      "recNext": "2028-01-10",
+      "courses": [
+        {
+          "id": "k_104",
+          "type": "Curso",
+          "name": "Curso de Árbitro Nível 1 FPT",
+          "date": "2017-05-14",
+          "place": "CT Coimbra, Coimbra"
+        },
+        {
+          "id": "k_105",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2024-01-11",
+          "place": "Complexo de Ténis do Jamor, Oeiras"
+        },
+        {
+          "id": "k_106",
+          "type": "Recertificação",
+          "name": "Recertificação de árbitros FPT",
+          "date": "2026-01-10",
+          "place": "Online"
+        }
+      ]
+    }
+  ],
+  "tours": [
+    {
+      "id": "p8",
+      "name": "Challenger 75 Faro",
+      "cat": "ATP Challenger 75",
+      "city": "Faro",
+      "region": "Algarve",
+      "club": "CT Faro",
+      "start": "2026-08-02",
+      "end": "2026-08-09",
+      "piso": "Piso rápido",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 5,
+        "LIN": 4
+      },
+      "resp": [
+        "ja3"
+      ],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "p7",
+      "name": "Campeonato Nacional de Veteranos",
+      "cat": "Campeonato Nacional (CN)",
+      "city": "Coimbra",
+      "region": "Centro",
+      "club": "CT Coimbra",
+      "start": "2026-08-16",
+      "end": "2026-08-23",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 1,
+        "CAD": 4,
+        "LIN": 2
+      },
+      "resp": [
+        "ja3"
+      ],
+      "ja": "",
+      "fptNo": "831"
+    },
+    {
+      "id": "p6",
+      "name": "Torneio A Funchal",
+      "cat": "Torneio A",
+      "city": "Funchal",
+      "region": "Madeira",
+      "club": "CT Funchal",
+      "start": "2026-09-04",
+      "end": "2026-09-06",
+      "piso": "Piso rápido",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "ja4",
+      "fptNo": "587"
+    },
+    {
+      "id": "p5",
+      "name": "ITF W35 Setúbal",
+      "cat": "ITF W35",
+      "city": "Setúbal",
+      "region": "Lisboa",
+      "club": "CT Setúbal",
+      "start": "2026-09-06",
+      "end": "2026-09-13",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 5,
+        "LIN": 2
+      },
+      "resp": [
+        "ja3"
+      ],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "p4",
+      "name": "Campeonato Nacional Sub-18",
+      "cat": "Campeonato Nacional (CN)",
+      "city": "Lisboa",
+      "region": "Lisboa",
+      "club": "CT Alvalade",
+      "start": "2026-09-13",
+      "end": "2026-09-20",
+      "piso": "Piso rápido",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 3,
+        "LIN": 0
+      },
+      "resp": [
+        "ja1"
+      ],
+      "ja": "",
+      "fptNo": "191"
+    },
+    {
+      "id": "p3",
+      "name": "ITF W15 Porto",
+      "cat": "ITF W15",
+      "city": "Porto",
+      "region": "Norte",
+      "club": "CT Porto",
+      "start": "2026-09-20",
+      "end": "2026-09-27",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 4,
+        "LIN": 0
+      },
+      "resp": [
+        "ja2"
+      ],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "p9",
+      "name": "Torneio B Almada",
+      "cat": "Torneio B",
+      "city": "Almada",
+      "region": "Lisboa",
+      "club": "CT Almada",
+      "start": "2026-10-02",
+      "end": "2026-10-04",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "a2",
+      "fptNo": "571"
+    },
+    {
+      "id": "p10",
+      "name": "Torneio C Oeiras",
+      "cat": "Torneio C",
+      "city": "Oeiras",
+      "region": "Lisboa",
+      "club": "CT Oeiras",
+      "start": "2026-09-25",
+      "end": "2026-09-27",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "",
+      "fptNo": "802"
+    },
+    {
+      "id": "p11",
+      "name": "Torneio B Sintra",
+      "cat": "Torneio B",
+      "city": "Sintra",
+      "region": "Lisboa",
+      "club": "CT Sintra",
+      "start": "2026-08-28",
+      "end": "2026-08-30",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "",
+      "fptNo": "620"
+    },
+    {
+      "id": "p12",
+      "name": "Torneio A Porto",
+      "cat": "Torneio A",
+      "city": "Porto",
+      "region": "Norte",
+      "club": "CT Porto",
+      "start": "2026-08-14",
+      "end": "2026-08-16",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "a5",
+      "fptNo": "551"
+    },
+    {
+      "id": "p2",
+      "name": "ITF M15 Oeiras",
+      "cat": "ITF M15",
+      "city": "Oeiras",
+      "region": "Lisboa",
+      "club": "CT Oeiras",
+      "start": "2026-09-27",
+      "end": "2026-10-04",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 5,
+        "LIN": 0
+      },
+      "resp": [
+        "ja1"
+      ],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "p1",
+      "name": "Campeonato Nacional Sub-12",
+      "cat": "Campeonato Nacional (CN)",
+      "city": "Lisboa",
+      "region": "Lisboa",
+      "club": "CT Monsanto",
+      "start": "2026-10-04",
+      "end": "2026-10-11",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 3,
+        "LIN": 0
+      },
+      "resp": [
+        "ja1"
+      ],
+      "ja": "",
+      "fptNo": "612"
+    },
+    {
+      "id": "t0",
+      "name": "Campeonato Nacional de Pares",
+      "cat": "Campeonato Nacional (CN)",
+      "city": "Cascais",
+      "region": "Lisboa",
+      "club": "CT Cascais",
+      "start": "2026-10-11",
+      "end": "2026-10-18",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 2,
+        "LIN": 0
+      },
+      "resp": [
+        "ja1"
+      ],
+      "ja": "",
+      "fptNo": "175"
+    },
+    {
+      "id": "t1",
+      "name": "Campeonato Nacional Sub-14",
+      "cat": "Campeonato Nacional (CN)",
+      "city": "Lisboa",
+      "region": "Lisboa",
+      "club": "CT Monsanto",
+      "start": "2026-10-18",
+      "end": "2026-10-25",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 3,
+        "LIN": 0
+      },
+      "resp": [
+        "ja1"
+      ],
+      "ja": "",
+      "fptNo": "623"
+    },
+    {
+      "id": "t2",
+      "name": "ITF M25 Jamor",
+      "cat": "ITF M25",
+      "city": "Oeiras",
+      "region": "Lisboa",
+      "club": "Complexo de Ténis do Jamor",
+      "start": "2026-10-18",
+      "end": "2026-10-25",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 6,
+        "LIN": 4
+      },
+      "resp": [
+        "ja3"
+      ],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "t3",
+      "name": "Campeonato Regional Norte Sub-12",
+      "cat": "Campeonato Regional (CR)",
+      "city": "Porto",
+      "region": "Norte",
+      "club": "CT Porto",
+      "start": "2026-10-23",
+      "end": "2026-10-25",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "a5",
+      "fptNo": "845"
+    },
+    {
+      "id": "t4",
+      "name": "Campeonato Nacional Absoluto",
+      "cat": "Campeonato Nacional (CN)",
+      "city": "Oeiras",
+      "region": "Lisboa",
+      "club": "CT Oeiras",
+      "start": "2026-10-25",
+      "end": "2026-11-01",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 1,
+        "CAD": 6,
+        "LIN": 6
+      },
+      "resp": [
+        "ja1"
+      ],
+      "ja": "",
+      "fptNo": "878"
+    },
+    {
+      "id": "t5",
+      "name": "ITF W35 Funchal",
+      "cat": "ITF W35",
+      "city": "Funchal",
+      "region": "Madeira",
+      "club": "CT Funchal",
+      "start": "2026-10-25",
+      "end": "2026-11-01",
+      "piso": "Piso rápido",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 5,
+        "LIN": 0
+      },
+      "resp": [
+        "ja4"
+      ],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "t11",
+      "name": "Torneio C Leiria",
+      "cat": "Torneio C",
+      "city": "Leiria",
+      "region": "Centro",
+      "club": "CT Leiria",
+      "start": "2026-10-30",
+      "end": "2026-11-01",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "a10",
+      "fptNo": "765"
+    },
+    {
+      "id": "t6",
+      "name": "Tennis Europe Sub-14 Vilamoura",
+      "cat": "Tennis Europe (TE)",
+      "city": "Vilamoura",
+      "region": "Algarve",
+      "club": "CT Vilamoura",
+      "start": "2026-11-01",
+      "end": "2026-11-08",
+      "piso": "Piso rápido",
+      "nom": false,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "t7",
+      "name": "Campeonato Nacional Sub-16",
+      "cat": "Campeonato Nacional (CN)",
+      "city": "Coimbra",
+      "region": "Centro",
+      "club": "CT Coimbra",
+      "start": "2026-11-01",
+      "end": "2026-11-08",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 3,
+        "LIN": 0
+      },
+      "resp": [
+        "ja2"
+      ],
+      "ja": "",
+      "fptNo": "725"
+    },
+    {
+      "id": "t13",
+      "name": "Torneio A Maia",
+      "cat": "Torneio A",
+      "city": "Maia",
+      "region": "Norte",
+      "club": "CT Maia",
+      "start": "2026-11-06",
+      "end": "2026-11-08",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "",
+      "fptNo": "459"
+    },
+    {
+      "id": "t8",
+      "name": "Challenger 125 Porto",
+      "cat": "ATP Challenger 125",
+      "city": "Porto",
+      "region": "Norte",
+      "club": "CT Porto",
+      "start": "2026-11-08",
+      "end": "2026-11-15",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 6,
+        "LIN": 8
+      },
+      "resp": [
+        "ja2"
+      ],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "t9",
+      "name": "Torneio C Ponta Delgada",
+      "cat": "Torneio C",
+      "city": "Ponta Delgada",
+      "region": "Açores",
+      "club": "CT Ponta Delgada",
+      "start": "2026-11-13",
+      "end": "2026-11-15",
+      "piso": "Piso rápido",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "",
+      "fptNo": "517"
+    },
+    {
+      "id": "t10",
+      "name": "WTA 125 Oeiras",
+      "cat": "WTA 125",
+      "city": "Oeiras",
+      "region": "Lisboa",
+      "club": "CT Oeiras",
+      "start": "2026-11-15",
+      "end": "2026-11-22",
+      "piso": "Terra batida",
+      "nom": true,
+      "scope": "int",
+      "needs": {
+        "JA": 0,
+        "SUP": 1,
+        "CHEFE": 1,
+        "CAD": 6,
+        "LIN": 8
+      },
+      "resp": [],
+      "ja": "",
+      "fptNo": ""
+    },
+    {
+      "id": "t12",
+      "name": "Torneio B Braga",
+      "cat": "Torneio B",
+      "city": "Braga",
+      "region": "Norte",
+      "club": "CT Braga",
+      "start": "2026-11-20",
+      "end": "2026-11-22",
+      "piso": "Terra batida",
+      "nom": false,
+      "scope": "nac",
+      "needs": {
+        "JA": 0,
+        "SUP": 0,
+        "CHEFE": 0,
+        "CAD": 0,
+        "LIN": 0
+      },
+      "resp": [],
+      "ja": "",
+      "fptNo": "154"
+    },
+    {
+      "id": "t14",
+      "name": "PM Sénior 7500€ Lisboa",
+      "cat": "PM Sénior 7500€",
+      "city": "Lisboa",
+      "region": "Lisboa",
+      "club": "CT Alvalade",
+      "start": "2026-11-22",
+      "end": "2026-11-29",
+      "piso": "Piso rápido",
+      "nom": true,
+      "scope": "nac",
+      "needs": {
+        "JA": 1,
+        "SUP": 0,
+        "CHEFE": 1,
+        "CAD": 4,
+        "LIN": 0
+      },
+      "resp": [
+        "ja1"
+      ],
+      "ja": "",
+      "fptNo": "418"
+    }
+  ],
+  "avail": [
+    {
+      "id": "d_166",
+      "u": "a1",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T15:14:57.568Z"
+    },
+    {
+      "id": "d_167",
+      "u": "a1",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28"
+      ],
+      "note": "Quinta e sexta estou a trabalhar.",
+      "status": "ativa",
+      "at": "2026-10-08T02:35:20.056Z"
+    },
+    {
+      "id": "d_168",
+      "u": "a1",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-11T23:23:19.081Z",
+      "nomT": "t7"
+    },
+    {
+      "id": "d_169",
+      "u": "a1",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T11:53:35.594Z"
+    },
+    {
+      "id": "d_170",
+      "u": "a12",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-07T15:07:01.094Z",
+      "nomT": "t1"
+    },
+    {
+      "id": "d_171",
+      "u": "a7",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-08T03:26:36.854Z",
+      "nomT": "t2"
+    },
+    {
+      "id": "d_172",
+      "u": "a8",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T04:50:16.795Z"
+    },
+    {
+      "id": "d_173",
+      "u": "a18",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-10T21:17:38.540Z",
+      "nomT": "t2"
+    },
+    {
+      "id": "d_174",
+      "u": "a17",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-10T12:55:51.477Z",
+      "nomT": "t2"
+    },
+    {
+      "id": "d_175",
+      "u": "a5",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-12T16:07:42.396Z",
+      "nomT": "t3"
+    },
+    {
+      "id": "d_176",
+      "u": "a3",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T05:04:07.789Z"
+    },
+    {
+      "id": "d_177",
+      "u": "a15",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-12T13:25:12.630Z",
+      "nomT": "t5"
+    },
+    {
+      "id": "d_178",
+      "u": "a9",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T19:17:38.706Z"
+    },
+    {
+      "id": "d_179",
+      "u": "a4",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "Posso chegar no sábado para o qualifying.",
+      "status": "ativa",
+      "at": "2026-10-07T21:18:44.418Z"
+    },
+    {
+      "id": "d_180",
+      "u": "a22",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T05:59:10.046Z"
+    },
+    {
+      "id": "d_181",
+      "u": "a21",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-07T22:21:09.194Z"
+    },
+    {
+      "id": "d_182",
+      "u": "a23",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-13T09:02:22.760Z"
+    },
+    {
+      "id": "d_183",
+      "u": "ja2",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-11T10:21:32.163Z",
+      "nomT": "t7"
+    },
+    {
+      "id": "d_184",
+      "u": "ja3",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-24"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-08T01:54:16.336Z",
+      "nomT": "t2"
+    },
+    {
+      "id": "d_185",
+      "u": "a14",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-07T12:16:31.515Z"
+    },
+    {
+      "id": "d_186",
+      "u": "a16",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T08:55:11.276Z"
+    },
+    {
+      "id": "d_187",
+      "u": "a19",
+      "wk": "2026-10-18",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "note": "",
+      "status": "nomeado",
+      "at": "2026-10-12T02:54:21.191Z",
+      "nomT": "t3"
+    },
+    {
+      "id": "d_188",
+      "u": "ja4",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "Posso fazer dupla função se for preciso.",
+      "status": "nomeado",
+      "at": "2026-10-08T20:54:43.945Z",
+      "nomT": "t5"
+    },
+    {
+      "id": "d_189",
+      "u": "a6",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-31"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T13:27:41.507Z"
+    },
+    {
+      "id": "d_190",
+      "u": "a7",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T13:24:45.228Z"
+    },
+    {
+      "id": "d_191",
+      "u": "a8",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-26",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T03:15:04.668Z"
+    },
+    {
+      "id": "d_192",
+      "u": "a12",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T16:04:07.924Z"
+    },
+    {
+      "id": "d_193",
+      "u": "a14",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-30",
+        "2026-10-31"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T09:16:48.276Z"
+    },
+    {
+      "id": "d_194",
+      "u": "a20",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T20:44:31.021Z"
+    },
+    {
+      "id": "d_195",
+      "u": "a24",
+      "wk": "2026-10-25",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-30",
+        "2026-11-01"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-13T03:20:27.715Z"
+    },
+    {
+      "id": "d_196",
+      "u": "ja1",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-07T13:08:48.143Z"
+    },
+    {
+      "id": "d_197",
+      "u": "ja3",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T13:01:34.371Z"
+    },
+    {
+      "id": "d_198",
+      "u": "a2",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T16:50:15.144Z"
+    },
+    {
+      "id": "d_199",
+      "u": "a7",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T10:01:20.194Z"
+    },
+    {
+      "id": "d_200",
+      "u": "a8",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T15:45:30.185Z"
+    },
+    {
+      "id": "d_201",
+      "u": "a10",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-07T18:23:12.100Z"
+    },
+    {
+      "id": "d_202",
+      "u": "a12",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T02:50:36.632Z"
+    },
+    {
+      "id": "d_203",
+      "u": "a15",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T02:12:25.606Z"
+    },
+    {
+      "id": "d_204",
+      "u": "a18",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-06",
+        "2026-11-07"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T03:58:16.189Z"
+    },
+    {
+      "id": "d_205",
+      "u": "a19",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T20:35:41.208Z"
+    },
+    {
+      "id": "d_206",
+      "u": "a22",
+      "wk": "2026-11-01",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-08"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T16:19:21.900Z"
+    },
+    {
+      "id": "d_207",
+      "u": "ja1",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T18:04:16.346Z"
+    },
+    {
+      "id": "d_208",
+      "u": "ja3",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-13T04:46:47.544Z"
+    },
+    {
+      "id": "d_209",
+      "u": "a3",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T16:24:54.385Z"
+    },
+    {
+      "id": "d_210",
+      "u": "a4",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T02:27:34.110Z"
+    },
+    {
+      "id": "d_211",
+      "u": "a5",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T04:38:17.751Z"
+    },
+    {
+      "id": "d_212",
+      "u": "a10",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T00:36:07.284Z"
+    },
+    {
+      "id": "d_213",
+      "u": "a12",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T11:44:30.388Z"
+    },
+    {
+      "id": "d_214",
+      "u": "a16",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T14:07:48.778Z"
+    },
+    {
+      "id": "d_215",
+      "u": "a19",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "Prefiro torneios na minha região.",
+      "status": "ativa",
+      "at": "2026-10-08T10:49:09.541Z"
+    },
+    {
+      "id": "d_216",
+      "u": "a24",
+      "wk": "2026-11-08",
+      "days": [
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T09:32:25.258Z"
+    },
+    {
+      "id": "d_217",
+      "u": "ja1",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T23:26:06.604Z"
+    },
+    {
+      "id": "d_218",
+      "u": "ja2",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-18",
+        "2026-11-20",
+        "2026-11-21"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T08:49:25.682Z"
+    },
+    {
+      "id": "d_219",
+      "u": "ja3",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T08:21:49.724Z"
+    },
+    {
+      "id": "d_220",
+      "u": "a2",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-19",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-13T05:16:55.913Z"
+    },
+    {
+      "id": "d_221",
+      "u": "a3",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T01:14:15.232Z"
+    },
+    {
+      "id": "d_222",
+      "u": "a7",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T17:19:09.537Z"
+    },
+    {
+      "id": "d_223",
+      "u": "a9",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T13:49:47.530Z"
+    },
+    {
+      "id": "d_224",
+      "u": "a10",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-18",
+        "2026-11-19"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-09T09:47:36.020Z"
+    },
+    {
+      "id": "d_225",
+      "u": "a12",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-16",
+        "2026-11-18",
+        "2026-11-21"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T14:28:14.771Z"
+    },
+    {
+      "id": "d_226",
+      "u": "a14",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T07:17:34.486Z"
+    },
+    {
+      "id": "d_227",
+      "u": "a17",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T19:55:01.134Z"
+    },
+    {
+      "id": "d_228",
+      "u": "a21",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-20",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T10:09:23.739Z"
+    },
+    {
+      "id": "d_229",
+      "u": "a22",
+      "wk": "2026-11-15",
+      "days": [
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T16:37:33.127Z"
+    },
+    {
+      "id": "d_230",
+      "u": "ja1",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-26",
+        "2026-11-27"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T16:03:52.377Z"
+    },
+    {
+      "id": "d_231",
+      "u": "ja2",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "note": "Durante a semana só depois das 18h.",
+      "status": "ativa",
+      "at": "2026-10-09T07:23:38.685Z"
+    },
+    {
+      "id": "d_232",
+      "u": "ja3",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-25",
+        "2026-11-27",
+        "2026-11-29"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T15:34:05.488Z"
+    },
+    {
+      "id": "d_233",
+      "u": "a4",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T10:23:45.327Z"
+    },
+    {
+      "id": "d_234",
+      "u": "a7",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-23",
+        "2026-11-24"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-08T18:02:22.986Z"
+    },
+    {
+      "id": "d_235",
+      "u": "a8",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-10T04:57:36.608Z"
+    },
+    {
+      "id": "d_236",
+      "u": "a10",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T07:44:11.755Z"
+    },
+    {
+      "id": "d_237",
+      "u": "a12",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-24",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T07:23:52.542Z"
+    },
+    {
+      "id": "d_238",
+      "u": "a20",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-25",
+        "2026-11-29"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-12T23:32:39.442Z"
+    },
+    {
+      "id": "d_239",
+      "u": "a22",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "note": "",
+      "status": "ativa",
+      "at": "2026-10-11T23:58:15.075Z"
+    },
+    {
+      "id": "d_240",
+      "u": "a23",
+      "wk": "2026-11-22",
+      "days": [
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "note": "Prefiro torneios na minha região.",
+      "status": "ativa",
+      "at": "2026-10-08T13:37:24.291Z"
+    }
+  ],
+  "noms": [
+    {
+      "id": "n_107",
+      "u": "ja3",
+      "t": "p8",
+      "fn": "CHEFE",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z"
+    },
+    {
+      "id": "n_108",
+      "u": "ja1",
+      "t": "p8",
+      "fn": "SUP",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z"
+    },
+    {
+      "id": "n_109",
+      "u": "a6",
+      "t": "p8",
+      "fn": "CAD",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z",
+      "enc": 4,
+      "sf": 1
+    },
+    {
+      "id": "n_110",
+      "u": "a14",
+      "t": "p8",
+      "fn": "CAD",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z",
+      "enc": 4,
+      "sf": 0
+    },
+    {
+      "id": "n_111",
+      "u": "a7",
+      "t": "p8",
+      "fn": "CAD",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z",
+      "enc": 3,
+      "sf": 0
+    },
+    {
+      "id": "n_112",
+      "u": "a9",
+      "t": "p8",
+      "fn": "CAD",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z",
+      "enc": 7,
+      "sf": 1
+    },
+    {
+      "id": "n_113",
+      "u": "a1",
+      "t": "p8",
+      "fn": "CAD",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z",
+      "enc": 7,
+      "sf": 1
+    },
+    {
+      "id": "n_114",
+      "u": "a8",
+      "t": "p8",
+      "fn": "LIN",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z"
+    },
+    {
+      "id": "n_115",
+      "u": "a2",
+      "t": "p8",
+      "fn": "LIN",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z"
+    },
+    {
+      "id": "n_116",
+      "u": "a11",
+      "t": "p8",
+      "fn": "LIN",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z"
+    },
+    {
+      "id": "n_117",
+      "u": "a19",
+      "t": "p8",
+      "fn": "LIN",
+      "days": [
+        "2026-08-02",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-08",
+        "2026-08-09"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-07-21T09:00:00.000Z",
+      "confAt": "2026-07-24T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-07-24T09:00:00.000Z"
+    },
+    {
+      "id": "n_118",
+      "u": "ja3",
+      "t": "p7",
+      "fn": "JA",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z"
+    },
+    {
+      "id": "n_119",
+      "u": "a1",
+      "t": "p7",
+      "fn": "CAD",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z",
+      "enc": 8,
+      "sf": 1
+    },
+    {
+      "id": "n_120",
+      "u": "ja1",
+      "t": "p7",
+      "fn": "CHEFE",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z"
+    },
+    {
+      "id": "n_121",
+      "u": "a8",
+      "t": "p7",
+      "fn": "CAD",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z",
+      "enc": 7,
+      "sf": 1
+    },
+    {
+      "id": "n_122",
+      "u": "a9",
+      "t": "p7",
+      "fn": "CAD",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z",
+      "enc": 8,
+      "sf": 0
+    },
+    {
+      "id": "n_123",
+      "u": "a12",
+      "t": "p7",
+      "fn": "CAD",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z",
+      "enc": 5,
+      "sf": 0
+    },
+    {
+      "id": "n_124",
+      "u": "a10",
+      "t": "p7",
+      "fn": "LIN",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z"
+    },
+    {
+      "id": "n_125",
+      "u": "a14",
+      "t": "p7",
+      "fn": "LIN",
+      "days": [
+        "2026-08-16",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-22",
+        "2026-08-23"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-04T09:00:00.000Z",
+      "confAt": "2026-08-07T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-07T09:00:00.000Z"
+    },
+    {
+      "id": "n_133",
+      "u": "ja3",
+      "t": "p5",
+      "fn": "CHEFE",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z"
+    },
+    {
+      "id": "n_134",
+      "u": "a1",
+      "t": "p5",
+      "fn": "LIN",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z"
+    },
+    {
+      "id": "n_135",
+      "u": "ja1",
+      "t": "p5",
+      "fn": "SUP",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z"
+    },
+    {
+      "id": "n_136",
+      "u": "a12",
+      "t": "p5",
+      "fn": "CAD",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z",
+      "enc": 7,
+      "sf": 1
+    },
+    {
+      "id": "n_137",
+      "u": "a2",
+      "t": "p5",
+      "fn": "CAD",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z",
+      "enc": 3,
+      "sf": 1
+    },
+    {
+      "id": "n_138",
+      "u": "a7",
+      "t": "p5",
+      "fn": "CAD",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z",
+      "enc": 8,
+      "sf": 0
+    },
+    {
+      "id": "n_139",
+      "u": "a16",
+      "t": "p5",
+      "fn": "CAD",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z",
+      "enc": 3,
+      "sf": 0
+    },
+    {
+      "id": "n_140",
+      "u": "a4",
+      "t": "p5",
+      "fn": "CAD",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z",
+      "enc": 7,
+      "sf": 1
+    },
+    {
+      "id": "n_141",
+      "u": "a23",
+      "t": "p5",
+      "fn": "LIN",
+      "days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-12",
+        "2026-09-13"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-08-25T09:00:00.000Z",
+      "confAt": "2026-08-28T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-08-28T09:00:00.000Z"
+    },
+    {
+      "id": "n_142",
+      "u": "ja1",
+      "t": "p4",
+      "fn": "JA",
+      "days": [
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-01T09:00:00.000Z",
+      "confAt": "2026-09-04T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-04T09:00:00.000Z"
+    },
+    {
+      "id": "n_143",
+      "u": "a1",
+      "t": "p4",
+      "fn": "CAD",
+      "days": [
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-01T09:00:00.000Z",
+      "confAt": "2026-09-04T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-04T09:00:00.000Z",
+      "enc": 3,
+      "sf": 1
+    },
+    {
+      "id": "n_144",
+      "u": "a16",
+      "t": "p4",
+      "fn": "CAD",
+      "days": [
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-01T09:00:00.000Z",
+      "confAt": "2026-09-04T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-04T09:00:00.000Z",
+      "enc": 8,
+      "sf": 0
+    },
+    {
+      "id": "n_145",
+      "u": "a4",
+      "t": "p4",
+      "fn": "CAD",
+      "days": [
+        "2026-09-13",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-19",
+        "2026-09-20"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-01T09:00:00.000Z",
+      "confAt": "2026-09-04T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-04T09:00:00.000Z",
+      "enc": 5,
+      "sf": 1
+    },
+    {
+      "id": "n_149",
+      "u": "ja1",
+      "t": "p3",
+      "fn": "SUP",
+      "days": [
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-09-08T09:00:00.000Z",
+      "confAt": "2026-09-11T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-11T09:00:00.000Z"
+    },
+    {
+      "id": "n_150",
+      "u": "ja3",
+      "t": "p3",
+      "fn": "CHEFE",
+      "days": [
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-09-08T09:00:00.000Z",
+      "confAt": "2026-09-11T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-11T09:00:00.000Z"
+    },
+    {
+      "id": "n_151",
+      "u": "ja2",
+      "t": "p3",
+      "fn": "CAD",
+      "days": [
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-09-08T09:00:00.000Z",
+      "confAt": "2026-09-11T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-11T09:00:00.000Z",
+      "enc": 6,
+      "sf": 1
+    },
+    {
+      "id": "n_152",
+      "u": "a19",
+      "t": "p3",
+      "fn": "CAD",
+      "days": [
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-09-08T09:00:00.000Z",
+      "confAt": "2026-09-11T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-11T09:00:00.000Z",
+      "enc": 8,
+      "sf": 1
+    },
+    {
+      "id": "n_153",
+      "u": "a11",
+      "t": "p3",
+      "fn": "CAD",
+      "days": [
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-09-08T09:00:00.000Z",
+      "confAt": "2026-09-11T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-11T09:00:00.000Z",
+      "enc": 7,
+      "sf": 0
+    },
+    {
+      "id": "n_154",
+      "u": "a5",
+      "t": "p3",
+      "fn": "CAD",
+      "days": [
+        "2026-09-20",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-09-08T09:00:00.000Z",
+      "confAt": "2026-09-11T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-11T09:00:00.000Z",
+      "enc": 7,
+      "sf": 1
+    },
+    {
+      "id": "n_155",
+      "u": "ja1",
+      "t": "p2",
+      "fn": "SUP",
+      "days": [
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-15T09:00:00.000Z",
+      "confAt": "2026-09-18T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-18T09:00:00.000Z"
+    },
+    {
+      "id": "n_156",
+      "u": "a1",
+      "t": "p2",
+      "fn": "CAD",
+      "days": [
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-15T09:00:00.000Z",
+      "confAt": "2026-09-18T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-18T09:00:00.000Z",
+      "enc": 8,
+      "sf": 0
+    },
+    {
+      "id": "n_157",
+      "u": "ja3",
+      "t": "p2",
+      "fn": "CHEFE",
+      "days": [
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-15T09:00:00.000Z",
+      "confAt": "2026-09-18T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-18T09:00:00.000Z"
+    },
+    {
+      "id": "n_158",
+      "u": "a7",
+      "t": "p2",
+      "fn": "CAD",
+      "days": [
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-15T09:00:00.000Z",
+      "confAt": "2026-09-18T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-18T09:00:00.000Z",
+      "enc": 8,
+      "sf": 1
+    },
+    {
+      "id": "n_159",
+      "u": "a4",
+      "t": "p2",
+      "fn": "CAD",
+      "days": [
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-15T09:00:00.000Z",
+      "confAt": "2026-09-18T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-18T09:00:00.000Z",
+      "enc": 6,
+      "sf": 1
+    },
+    {
+      "id": "n_160",
+      "u": "a12",
+      "t": "p2",
+      "fn": "CAD",
+      "days": [
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-15T09:00:00.000Z",
+      "confAt": "2026-09-18T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-18T09:00:00.000Z",
+      "enc": 7,
+      "sf": 0
+    },
+    {
+      "id": "n_161",
+      "u": "a2",
+      "t": "p2",
+      "fn": "CAD",
+      "days": [
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01",
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-15T09:00:00.000Z",
+      "confAt": "2026-09-18T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-18T09:00:00.000Z",
+      "enc": 3,
+      "sf": 1
+    },
+    {
+      "id": "n_162",
+      "u": "ja1",
+      "t": "p1",
+      "fn": "JA",
+      "days": [
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-22T09:00:00.000Z",
+      "confAt": "2026-09-25T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-25T09:00:00.000Z"
+    },
+    {
+      "id": "n_163",
+      "u": "a1",
+      "t": "p1",
+      "fn": "CAD",
+      "days": [
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-22T09:00:00.000Z",
+      "confAt": "2026-09-25T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-25T09:00:00.000Z",
+      "enc": 8,
+      "sf": 1
+    },
+    {
+      "id": "n_164",
+      "u": "a2",
+      "t": "p1",
+      "fn": "CAD",
+      "days": [
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-22T09:00:00.000Z",
+      "confAt": "2026-09-25T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-25T09:00:00.000Z",
+      "enc": 5,
+      "sf": 0
+    },
+    {
+      "id": "n_165",
+      "u": "a4",
+      "t": "p1",
+      "fn": "CAD",
+      "days": [
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-09",
+        "2026-10-10",
+        "2026-10-11"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-09-22T09:00:00.000Z",
+      "confAt": "2026-09-25T09:00:00.000Z",
+      "confBy": "ca1",
+      "convAt": "2026-09-25T09:00:00.000Z",
+      "enc": 3,
+      "sf": 1
+    },
+    {
+      "id": "n_241",
+      "u": "ja1",
+      "t": "t0",
+      "fn": "JA",
+      "days": [
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-10-12T06:25:44.954Z",
+      "confAt": "2026-10-13T07:53:05.313Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-09T11:07:31.383Z"
+    },
+    {
+      "id": "n_242",
+      "u": "a12",
+      "t": "t0",
+      "fn": "CAD",
+      "days": [
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-10-11T01:03:52.618Z",
+      "confAt": "2026-10-12T15:25:48.200Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-09T11:07:31.383Z"
+    },
+    {
+      "id": "n_243",
+      "u": "a16",
+      "t": "t0",
+      "fn": "CAD",
+      "days": [
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-16",
+        "2026-10-17",
+        "2026-10-18"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-10-11T13:12:20.515Z",
+      "confAt": "2026-10-12T23:25:38.228Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-09T11:07:31.383Z"
+    },
+    {
+      "id": "n_244",
+      "u": "ja1",
+      "t": "t1",
+      "fn": "JA",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-10-10T10:54:33.360Z",
+      "confAt": "2026-10-13T03:57:02.637Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-12T11:07:31.398Z"
+    },
+    {
+      "id": "n_245",
+      "u": "a12",
+      "t": "t1",
+      "fn": "CAD",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-10-10T17:29:11.196Z",
+      "confAt": "2026-10-13T04:45:31.343Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-12T11:07:31.398Z"
+    },
+    {
+      "id": "n_246",
+      "u": "a1",
+      "t": "t1",
+      "fn": "CAD",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "proposta",
+      "by": "ja1",
+      "at": "2026-10-13T10:02:35.432Z"
+    },
+    {
+      "id": "n_248",
+      "u": "ja3",
+      "t": "t2",
+      "fn": "CHEFE",
+      "days": [
+        "2026-10-18",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-24"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-10-10T12:48:03.921Z",
+      "confAt": "2026-10-14T09:54:07.605Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-12T23:07:31.398Z"
+    },
+    {
+      "id": "n_249",
+      "u": "ca2",
+      "t": "t2",
+      "fn": "SUP",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-10-09T22:42:39.553Z",
+      "confAt": "2026-10-12T22:44:10.480Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-12T23:07:31.398Z"
+    },
+    {
+      "id": "n_250",
+      "u": "a7",
+      "t": "t2",
+      "fn": "CAD",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-10-10T12:26:18.375Z",
+      "confAt": "2026-10-13T23:07:38.613Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-12T23:07:31.398Z"
+    },
+    {
+      "id": "n_251",
+      "u": "a18",
+      "t": "t2",
+      "fn": "LIN",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-10-10T12:38:31.193Z",
+      "confAt": "2026-10-13T20:19:09.022Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-12T23:07:31.398Z"
+    },
+    {
+      "id": "n_252",
+      "u": "a17",
+      "t": "t2",
+      "fn": "LIN",
+      "days": [
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "confirmada",
+      "by": "ja3",
+      "at": "2026-10-11T02:12:53.211Z",
+      "confAt": "2026-10-13T17:25:37.641Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-12T23:07:31.398Z"
+    },
+    {
+      "id": "n_253",
+      "u": "a8",
+      "t": "t2",
+      "fn": "CAD",
+      "days": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "proposta",
+      "by": "ja3",
+      "at": "2026-10-14T00:21:04.540Z"
+    },
+    {
+      "id": "n_255",
+      "u": "ja3",
+      "t": "t4",
+      "fn": "CHEFE",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "confirmada",
+      "by": "ja1",
+      "at": "2026-10-09T16:14:48.398Z",
+      "confAt": "2026-10-12T21:09:21.577Z",
+      "confBy": "ca1"
+    },
+    {
+      "id": "n_256",
+      "u": "a4",
+      "t": "t4",
+      "fn": "CAD",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "proposta",
+      "by": "ja1",
+      "at": "2026-10-13T14:50:01.561Z"
+    },
+    {
+      "id": "n_258",
+      "u": "a22",
+      "t": "t4",
+      "fn": "CAD",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "proposta",
+      "by": "ja1",
+      "at": "2026-10-14T20:26:47.117Z"
+    },
+    {
+      "id": "n_260",
+      "u": "a21",
+      "t": "t4",
+      "fn": "LIN",
+      "days": [
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "proposta",
+      "by": "ja1",
+      "at": "2026-10-14T17:09:24.583Z"
+    },
+    {
+      "id": "n_262",
+      "u": "a23",
+      "t": "t4",
+      "fn": "LIN",
+      "days": [
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "proposta",
+      "by": "ja1",
+      "at": "2026-10-14T20:01:29.723Z"
+    },
+    {
+      "id": "n_264",
+      "u": "ja4",
+      "t": "t5",
+      "fn": "SUP",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "confirmada",
+      "by": "ja4",
+      "at": "2026-10-10T22:45:11.325Z",
+      "confAt": "2026-10-13T16:33:47.732Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-13T11:07:31.398Z"
+    },
+    {
+      "id": "n_265",
+      "u": "a15",
+      "t": "t5",
+      "fn": "CAD",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "confirmada",
+      "by": "ja4",
+      "at": "2026-10-09T14:24:01.250Z",
+      "confAt": "2026-10-14T04:29:41.840Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-13T11:07:31.398Z"
+    },
+    {
+      "id": "n_266",
+      "u": "a9",
+      "t": "t5",
+      "fn": "CAD",
+      "days": [
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "proposta",
+      "by": "ja4",
+      "at": "2026-10-13T09:34:33.102Z"
+    },
+    {
+      "id": "n_268",
+      "u": "ja2",
+      "t": "t7",
+      "fn": "JA",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-10-10T08:02:16.531Z",
+      "confAt": "2026-10-14T06:10:30.564Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-14T13:31:31.398Z"
+    },
+    {
+      "id": "n_269",
+      "u": "a1",
+      "t": "t7",
+      "fn": "CAD",
+      "days": [
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08"
+      ],
+      "status": "confirmada",
+      "by": "ja2",
+      "at": "2026-10-10T04:06:22.997Z",
+      "confAt": "2026-10-12T13:10:18.690Z",
+      "confBy": "ca1",
+      "convAt": "2026-10-14T13:31:31.398Z"
+    },
+    {
+      "id": "n_282",
+      "u": "ja4",
+      "t": "p6",
+      "fn": "JA",
+      "days": [
+        "2026-09-04",
+        "2026-09-05",
+        "2026-09-06"
+      ],
+      "status": "registada",
+      "by": "ca1",
+      "at": "2026-10-07T11:07:31.399Z",
+      "jaAuto": true
+    },
+    {
+      "id": "n_283",
+      "u": "a2",
+      "t": "p9",
+      "fn": "JA",
+      "days": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "registada",
+      "by": "ca1",
+      "at": "2026-10-07T11:07:31.399Z",
+      "jaAuto": true
+    },
+    {
+      "id": "n_284",
+      "u": "a5",
+      "t": "p12",
+      "fn": "JA",
+      "days": [
+        "2026-08-14",
+        "2026-08-15",
+        "2026-08-16"
+      ],
+      "status": "registada",
+      "by": "ca1",
+      "at": "2026-10-07T11:07:31.399Z",
+      "jaAuto": true
+    },
+    {
+      "id": "n_285",
+      "u": "a5",
+      "t": "t3",
+      "fn": "JA",
+      "days": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "registada",
+      "by": "ca1",
+      "at": "2026-10-07T11:07:31.399Z",
+      "jaAuto": true
+    },
+    {
+      "id": "n_286",
+      "u": "a10",
+      "t": "t11",
+      "fn": "JA",
+      "days": [
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01"
+      ],
+      "status": "registada",
+      "by": "ca1",
+      "at": "2026-10-07T11:07:31.399Z",
+      "jaAuto": true
+    },
+    {
+      "id": "n_287",
+      "u": "a22",
+      "ext": "",
+      "t": "p9",
+      "fn": "CAD",
+      "days": [
+        "2026-10-02",
+        "2026-10-03",
+        "2026-10-04"
+      ],
+      "status": "registada",
+      "by": "a2",
+      "at": "2026-10-13T11:07:31.399Z"
+    },
+    {
+      "id": "n_288",
+      "u": "a19",
+      "ext": "",
+      "t": "t3",
+      "fn": "CAD",
+      "days": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "registada",
+      "by": "a5",
+      "at": "2026-10-13T11:07:31.399Z"
+    },
+    {
+      "id": "n_289",
+      "u": null,
+      "ext": "Rodrigo Sá",
+      "t": "t3",
+      "fn": "CAD",
+      "days": [
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "registada",
+      "by": "a5",
+      "at": "2026-10-13T11:07:31.399Z"
+    },
+    {
+      "id": "n_290",
+      "u": "a11",
+      "ext": "",
+      "t": "t3",
+      "fn": "LIN",
+      "days": [
+        "2026-10-24",
+        "2026-10-25"
+      ],
+      "status": "registada",
+      "by": "a5",
+      "at": "2026-10-13T11:07:31.399Z"
+    }
+  ],
+  "evals": [
+    {
+      "id": "v_126",
+      "n": "n_119",
+      "u": "a1",
+      "t": "p7",
+      "fn": "CAD",
+      "score": 7,
+      "comment": "Colaborativo com a equipa. Pode ganhar confiança nas correções (overrule).",
+      "by": "ja3",
+      "at": "2026-08-24T23:00:00.000Z",
+      "status": "validada",
+      "valBy": "ca1",
+      "valAt": "2026-08-27T23:00:00.000Z"
+    },
+    {
+      "id": "v_127",
+      "n": "n_120",
+      "u": "ja1",
+      "t": "p7",
+      "fn": "CHEFE",
+      "score": 5,
+      "comment": "Excelente posicionamento e concentração durante todo o torneio.",
+      "by": "ja3",
+      "at": "2026-08-24T23:00:00.000Z",
+      "status": "validada",
+      "valBy": "ca1",
+      "valAt": "2026-08-27T23:00:00.000Z"
+    },
+    {
+      "id": "v_128",
+      "n": "n_121",
+      "u": "a8",
+      "t": "p7",
+      "fn": "CAD",
+      "score": 5,
+      "comment": "Colaborativo com a equipa. Pode ganhar confiança nas correções (overrule).",
+      "by": "ja3",
+      "at": "2026-08-24T23:00:00.000Z",
+      "status": "validada",
+      "valBy": "ca1",
+      "valAt": "2026-08-27T23:00:00.000Z"
+    },
+    {
+      "id": "v_129",
+      "n": "n_122",
+      "u": "a9",
+      "t": "p7",
+      "fn": "CAD",
+      "score": 6,
+      "comment": "Boa gestão dos encontros e comunicação clara com os jogadores.",
+      "by": "ja3",
+      "at": "2026-08-24T23:00:00.000Z",
+      "status": "validada",
+      "valBy": "ca1",
+      "valAt": "2026-08-27T23:00:00.000Z"
+    },
+    {
+      "id": "v_130",
+      "n": "n_123",
+      "u": "a12",
+      "t": "p7",
+      "fn": "CAD",
+      "score": 4,
+      "comment": "Bom controlo do tempo entre pontos e trocas de campo.",
+      "by": "ja3",
+      "at": "2026-08-24T23:00:00.000Z",
+      "status": "validada",
+      "valBy": "ca1",
+      "valAt": "2026-08-27T23:00:00.000Z"
+    },
+    {
+      "id": "v_131",
+      "n": "n_124",
+      "u": "a10",
+      "t": "p7",
+      "fn": "LIN",
+      "score": 5,
+      "comment": "Excelente posicionamento e concentração durante todo o torneio.",
+      "by": "ja3",
+      "at": "2026-08-24T23:00:00.000Z",
+      "status": "validada",
+      "valBy": "ca1",
+      "valAt": "2026-08-27T23:00:00.000Z"
+    },
+    {
+      "id": "v_132",
+      "n": "n_125",
+      "u": "a14",
+      "t": "p7",
+      "fn": "LIN",
+      "score": 4,
+      "comment": "Pontual e bem preparado. Pode projetar mais a voz nas chamadas.",
+      "by": "ja3",
+      "at": "2026-08-24T23:00:00.000Z",
+      "status": "validada",
+      "valBy": "ca1",
+      "valAt": "2026-08-27T23:00:00.000Z"
+    },
+    {
+      "id": "v_146",
+      "n": "n_143",
+      "u": "a1",
+      "t": "p4",
+      "fn": "CAD",
+      "score": 6,
+      "comment": "Boa gestão dos encontros e comunicação clara com os jogadores.",
+      "by": "ja1",
+      "at": "2026-09-21T23:00:00.000Z",
+      "status": "submetida"
+    },
+    {
+      "id": "v_147",
+      "n": "n_144",
+      "u": "a16",
+      "t": "p4",
+      "fn": "CAD",
+      "score": 5,
+      "comment": "Pontual e bem preparado. Pode projetar mais a voz nas chamadas.",
+      "by": "ja1",
+      "at": "2026-09-21T23:00:00.000Z",
+      "status": "submetida"
+    },
+    {
+      "id": "v_148",
+      "n": "n_145",
+      "u": "a4",
+      "t": "p4",
+      "fn": "CAD",
+      "score": 6,
+      "comment": "Excelente posicionamento e concentração durante todo o torneio.",
+      "by": "ja1",
+      "at": "2026-09-21T23:00:00.000Z",
+      "status": "submetida"
+    }
+  ],
+  "msgs": [],
+  "emails": [],
+  "cad": [
+    {
+      "id": "c_291",
+      "u": "a1",
+      "wk": "2026-02-08",
+      "date": "2026-02-14",
+      "tid": "",
+      "tname": "Torneio C CT Lisboa",
+      "tipo": "S",
+      "fptNo": "442",
+      "fn": "CAD",
+      "enc": 6,
+      "sf": 1,
+      "jaName": "Bruno Costa",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-02-16T00:00:00.000Z"
+    },
+    {
+      "id": "c_292",
+      "u": "a1",
+      "wk": "2026-02-08",
+      "date": "2026-02-14",
+      "tid": "",
+      "tname": "Torneio C Loures",
+      "tipo": "S",
+      "fptNo": "792",
+      "fn": "CAD",
+      "enc": 4,
+      "sf": 0,
+      "jaName": "Miguel Santos",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-02-16T00:00:00.000Z"
+    },
+    {
+      "id": "c_293",
+      "u": "a1",
+      "wk": "2026-03-08",
+      "date": "2026-03-14",
+      "tid": "",
+      "tname": "Torneio B Estoril",
+      "tipo": "S",
+      "fptNo": "194",
+      "fn": "CAD",
+      "enc": 7,
+      "sf": 2,
+      "jaName": "Miguel Santos",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-03-16T00:00:00.000Z"
+    },
+    {
+      "id": "c_294",
+      "u": "a1",
+      "wk": "2026-03-08",
+      "date": "2026-03-14",
+      "tid": "",
+      "tname": "Torneio C Odivelas",
+      "tipo": "S",
+      "fptNo": "295",
+      "fn": "CAD",
+      "enc": 5,
+      "sf": 1,
+      "jaName": "Bruno Costa",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-03-16T00:00:00.000Z"
+    },
+    {
+      "id": "c_295",
+      "u": "a1",
+      "wk": "2026-05-17",
+      "date": "2026-05-23",
+      "tid": "",
+      "tname": "Torneio A Lisboa",
+      "tipo": "S",
+      "fptNo": "194",
+      "fn": "CAD",
+      "enc": 8,
+      "sf": 2,
+      "jaName": "Miguel Santos",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-05-24T23:00:00.000Z"
+    },
+    {
+      "id": "c_296",
+      "u": "a1",
+      "wk": "2026-05-17",
+      "date": "2026-05-23",
+      "tid": "",
+      "tname": "Torneio B Cascais",
+      "tipo": "S",
+      "fptNo": "479",
+      "fn": "CAD",
+      "enc": 6,
+      "sf": 1,
+      "jaName": "Bruno Costa",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-05-24T23:00:00.000Z"
+    },
+    {
+      "id": "c_297",
+      "u": "a1",
+      "wk": "2026-08-09",
+      "date": "2026-08-15",
+      "tid": "",
+      "tname": "Torneio C Almada",
+      "tipo": "S",
+      "fptNo": "116",
+      "fn": "LIN",
+      "enc": 0,
+      "sf": 0,
+      "jaName": "Bruno Costa",
+      "status": "recusado",
+      "reason": "O Juiz-Árbitro indicado não confirma a tua presença neste torneio.",
+      "at": "2026-08-16T23:00:00.000Z"
+    },
+    {
+      "id": "c_298",
+      "u": "ja1",
+      "wk": "2026-01-25",
+      "date": "2026-01-31",
+      "tid": "",
+      "tname": "Torneio A Lisboa",
+      "tipo": "S",
+      "fptNo": "496",
+      "fn": "JA",
+      "enc": 0,
+      "sf": 0,
+      "jaName": "Miguel Santos",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-02-02T00:00:00.000Z"
+    },
+    {
+      "id": "c_299",
+      "u": "ja1",
+      "wk": "2026-03-01",
+      "date": "2026-03-07",
+      "tid": "",
+      "tname": "Torneio B Oeiras",
+      "tipo": "S",
+      "fptNo": "767",
+      "fn": "JA",
+      "enc": 0,
+      "sf": 0,
+      "jaName": "Miguel Santos",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-03-09T00:00:00.000Z"
+    },
+    {
+      "id": "c_300",
+      "u": "ja1",
+      "wk": "2026-03-22",
+      "date": "2026-03-28",
+      "tid": "",
+      "tname": "Torneio C Cascais",
+      "tipo": "S",
+      "fptNo": "691",
+      "fn": "JA",
+      "enc": 0,
+      "sf": 0,
+      "jaName": "Miguel Santos",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-03-30T00:00:00.000Z"
+    },
+    {
+      "id": "c_301",
+      "u": "ja1",
+      "wk": "2026-06-28",
+      "date": "2026-07-04",
+      "tid": "",
+      "tname": "Torneio A Estoril",
+      "tipo": "S",
+      "fptNo": "443",
+      "fn": "JA",
+      "enc": 0,
+      "sf": 0,
+      "jaName": "Miguel Santos",
+      "status": "aprovado",
+      "reason": "",
+      "at": "2026-07-05T23:00:00.000Z"
+    },
+    {
+      "id": "c_302",
+      "u": "ja1",
+      "wk": "2026-08-23",
+      "date": "2026-08-29",
+      "tid": "",
+      "tname": "Torneio B Lisboa",
+      "tipo": "S",
+      "fptNo": "593",
+      "fn": "JA",
+      "enc": 0,
+      "sf": 0,
+      "jaName": "Miguel Santos",
+      "status": "pendente",
+      "reason": "",
+      "at": "2026-08-30T23:00:00.000Z"
+    },
+    {
+      "id": "c_303",
+      "u": "a1",
+      "wk": "2026-08-23",
+      "date": "2026-08-28",
+      "tid": "p11",
+      "tname": "Torneio B Sintra",
+      "tipo": "S",
+      "fptNo": "620",
+      "fn": "CAD",
+      "enc": 6,
+      "sf": 1,
+      "jaName": "Bruno Costa",
+      "status": "pendente",
+      "reason": "",
+      "at": "2026-10-12T03:19:23.835Z"
+    },
+    {
+      "id": "c_304",
+      "u": "a3",
+      "wk": "2026-08-09",
+      "date": "2026-08-14",
+      "tid": "p12",
+      "tname": "Torneio A Porto",
+      "tipo": "S",
+      "fptNo": "551",
+      "fn": "CAD",
+      "enc": 7,
+      "sf": 2,
+      "jaName": "Eduarda Pinto",
+      "status": "pendente",
+      "reason": "",
+      "at": "2026-10-10T18:46:13.930Z"
+    }
+  ],
+  "docs": []
+}

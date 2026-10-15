@@ -5,6 +5,7 @@ export function testDb() {
   const raw = new DatabaseSync(':memory:');
   raw.exec('PRAGMA foreign_keys = ON');
   raw.exec(readFileSync(new URL('../server/migrations/001_core.sql', import.meta.url), 'utf8'));
+  raw.exec(readFileSync(new URL('../server/migrations/002_arbitration.postgres.sql', import.meta.url),'utf8').replace(/^ALTER TABLE .*$/gm,''));
   return {
     async get(sql, ...args) { return raw.prepare(sql).get(...args); },
     async all(sql, ...args) { return raw.prepare(sql).all(...args); },

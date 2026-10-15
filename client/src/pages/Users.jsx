@@ -1,3 +1,4 @@
+import Arbitration from '../arbitration/Arbitration.jsx';
 import React, { useEffect, useMemo, useState } from 'react';
 import { get, post, put, del } from '../lib/api.js';
 import { fdate, fullTime, ago, norm, plural } from '../lib/fmt.js';
@@ -124,6 +125,7 @@ function UserForm({ u, close, onSaved, self }) {
         <Field label="Telefone fixo" id="uf-t"><input className="inp" id="uf-t" value={f.tel} onChange={set('tel')} /></Field>
         <Field label="Data de nascimento" id="uf-b"><input className="inp" id="uf-b" type="date" value={f.birth} onChange={set('birth')} /></Field>
       </div>
+      {u&&<Arbitration view="qualification" userId={u.id} compact/>}
       <Field label={u ? 'Definir um código novo (deixa vazio para manter)' : 'Código de acesso (opcional)'} id="uf-pin" hint={u ? 'A pessoa também pode definir o seu em "Esqueci-me do código".' : 'Se ficar vazio, a pessoa recebe um email para definir o seu código.'}>
         <PinInput id="uf-pin" value={f.pin} onChange={set('pin')} style={{ maxWidth: 180 }} />
       </Field>

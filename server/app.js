@@ -27,7 +27,7 @@ export const APP = {
   docCats: ['Regulamentos', 'Regras', 'Remunerações', 'Circulares', 'Formação', 'Outros'],
   docExt: ['pdf', 'docx', 'xlsx', 'pptx', 'txt', 'csv', 'zip', 'png', 'jpg', 'jpeg'],
   // Módulos ligados nesta instalação (o núcleo está sempre ligado).
-  modules: [],
+  modules: [{key:'arbitration',name:'Arbitragem'}],
 };
 
 export const roleIndex = (key) => APP.roles.findIndex((r) => r.key === key);

@@ -1,3 +1,5 @@
+import {loadState,persist} from '../server/modules/arbitration/routes.js';
+import {execute} from '../server/modules/arbitration/engine.js';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import postgres from 'postgres';
@@ -28,6 +30,12 @@ test('Postgres: identities, transactions, rollback, conflict handling and timest
     assert.equal((await db.get('SELECT COUNT(*) n FROM message_to')).n, 1);
     await assert.rejects(db.tx(async () => { await db.run('UPDATE users SET name = ? WHERE id = ?', 'Changed', id); await db.tx(async () => { throw new Error('nested rollback'); }); }), /nested rollback/);
     assert.equal((await db.get('SELECT name FROM users WHERE id = ?', id)).name, 'Test User');
+    await db.exec(readFileSync(new URL('../server/migrations/002_arbitration.postgres.sql',import.meta.url),'utf8'));
+    const before=await loadState(db),after=structuredClone(before);
+    execute(after,{id,name:'Test User',role:'ca'},'tour',{name:'Postgres Tournament',cat:'Torneio A',start:'2030-01-06',end:'2030-01-13',city:'Lisboa',region:'Lisboa',club:'CT Teste',needs:{},resp:[]});
+    await db.tx(()=>persist(db,before,after));
+    assert.equal((await loadState(db)).tours[0].name,'Postgres Tournament');
+
   } finally {
     if (db) await db.close();
     await admin.unsafe(`DROP SCHEMA IF EXISTS ${schema} CASCADE`);

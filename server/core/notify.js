@@ -5,6 +5,7 @@ import { adminRole } from '../app.js';
 // Quando é que cada tipo de aviso segue também por email:
 // 'always' sempre · 'conf' se a pessoa tiver ligado "alterações" · 'msg' se tiver ligado "mensagens" · 'none' só na app
 export const EMAIL_PREF = {
+  selecao: 'none', convocatoria: 'always', alteracao: 'conf', recusa: 'conf', anulacao: 'conf', avaliacao: 'conf', equipa: 'conf', cadok: 'none', cadno: 'conf',
   aprovacao: 'always',
   rejeicao: 'always',
   acesso: 'always',

@@ -1,3 +1,7 @@
+# C.Arbitragem · React + Supabase
+
+**Começa por [START-HERE.md](START-HERE.md)** para instalar o módulo de arbitragem e a migração SQL 002.
+
 # LPJ Sports · C.Arbitragem
 
 React + Node.js API, PostgreSQL via `DATABASE_URL`, Supabase private Storage, Vercel hosting.

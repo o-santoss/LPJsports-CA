@@ -10,6 +10,13 @@ import Documents from './pages/Documents.jsx';
 import Users from './pages/Users.jsx';
 import Profile from './pages/Profile.jsx';
 import Help from './pages/Help.jsx';
+import Arbitration from './arbitration/Arbitration.jsx';
+const TournamentPage=()=> <Arbitration view="tournaments"/>;
+const AvailabilityPage=()=> <Arbitration view="availability"/>;
+const NominationsPage=()=> <Arbitration view="nominations"/>;
+const ManagementPage=()=> <Arbitration view="management"/>;
+const DirectoryPage=()=> <Arbitration view="directory"/>;
+const LogbookPage=()=> <Arbitration view="logbook"/>;
 
 const Ctx = createContext(null);
 export const useApp = () => useContext(Ctx);
@@ -49,10 +56,11 @@ function Root() {
     try {
       const r = await get('/api/me');
       setMe(r.user);
-      const c = { unread: r.unread, unseenDocs: r.unseenDocs, pending: 0 };
+      const c = { unread: r.unread, unseenDocs: r.unseenDocs, pending: 0, canManage:false };
+      try { const domain=await get('/api/arbitration/counts');c.pending=domain.pending||0;c.canManage=domain.canManage; } catch {}
       if (r.user.role === config?.roles.find((x) => x.admin)?.key) {
         const h = await get('/api/home');
-        c.pending = h.pending || 0;
+        c.pending += h.pending || 0;
       }
       setCounts(c);
       return r.user;
@@ -98,12 +106,18 @@ function Root() {
 
   const tabs = me ? [
     ['/', 'Início', 'home', 0],
+    ['/disponibilidade', 'Disponibilidade', 'cal', 0],
+    ['/nomeacoes', 'Nomeações', 'users', 0],
+    ['/caderneta', 'Caderneta', 'doc', 0],
+    ['/torneios', 'Torneios', 'cal', 0],
+    ...(roleIdx>=1||counts.canManage ? [['/gestao', 'Gestão', 'users', counts.pending]] : []),
+    ...(roleIdx >= 1 ? [['/arbitros', 'Árbitros', 'users', 0]] : []),
     ['/mensagens', 'Notificações', 'bell', counts.unread],
     ['/documentos', 'Documentos', 'doc', counts.unseenDocs],
     ...(isAdmin ? [['/utilizadores', 'Utilizadores', 'users', counts.pending]] : []),
     ['/ajuda', 'Ajuda', 'help', 0],
   ] : [];
-  const pages = { '/': Home, '/mensagens': Messages, '/documentos': Documents, '/utilizadores': isAdmin ? Users : Home, '/perfil': Profile, '/ajuda': Help };
+  const pages = { '/torneios': TournamentPage, '/disponibilidade':AvailabilityPage, '/nomeacoes':NominationsPage, '/gestao':ManagementPage, '/arbitros':roleIdx>=1?DirectoryPage:Home, '/caderneta':LogbookPage, '/': Home, '/mensagens': Messages, '/documentos': Documents, '/utilizadores': isAdmin ? Users : Home, '/perfil': Profile, '/ajuda': Help };
   const Page = pages[path] || Home;
 
   return (
@@ -124,11 +138,12 @@ function Root() {
         <div className="layout">
           {me && (
             <nav className="nav" aria-label="Navegação principal">
-              {tabs.map(([p, l, ic, b]) => (
-                <button key={p} className={`nv ${path === p ? 'on' : ''}`} onClick={() => go(p)} aria-current={path === p ? 'page' : undefined}>
+              {tabs.map(([p, l, ic, b], index) => (
+                <button key={p} className={`nv ${index>=4?'nv-x':''} ${path === p ? 'on' : ''}`} onClick={() => go(p)} aria-current={path === p ? 'page' : undefined}>
                   <Icon name={ic} /><span>{l}</span>{b ? <b className="bdg">{b}</b> : null}
                 </button>
               ))}
+              <button className="nv nv-more" onClick={()=>ui.openModal('Mais',close=><div className="plist">{tabs.slice(4).map(([p,l,ic,b])=><button className="prow" key={p} onClick={()=>{go(p);close();}}><Icon name={ic}/><span>{l}</span>{b>0&&<b className="bdg">{b}</b>}</button>)}</div>)}><Icon name="more"/><span>Mais</span></button>
               <LpjSide />
             </nav>
           )}

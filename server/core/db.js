@@ -1,12 +1,17 @@
 import postgres from 'postgres';
+import {readFileSync,existsSync} from 'node:fs';
+import {resolve} from 'node:path';
 import { AsyncLocalStorage } from 'node:async_hooks';
 
 export function openDb(url = process.env.DATABASE_URL, { schema } = {}) {
   if (!url) throw new Error('DATABASE_URL is required');
+  const caPath=process.env.DATABASE_CA_CERT_PATH||resolve('supabase-ca.crt');
+  const ca=process.env.DATABASE_CA_CERT?.replace(/\\n/g,'\n')||(existsSync(caPath)?readFileSync(caPath,'utf8'):undefined);
+  const ssl=process.env.DATABASE_SSL==='disable'?false:ca?{rejectUnauthorized:true,ca}:'verify-full';
   const sql = postgres(url, {
     connection: schema ? { search_path: schema } : {},
     prepare: false, max: 1, idle_timeout: 20, connect_timeout: 15,
-    ssl: process.env.DATABASE_SSL === 'disable' ? false : 'verify-full',
+    ssl,
     types: { bigint: { to: 20, from: [20], serialize: String, parse: Number } },
     transform: { undefined: null },
   });

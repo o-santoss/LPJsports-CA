@@ -1,3 +1,4 @@
+import Arbitration from '../arbitration/Arbitration.jsx';
 import React, { useEffect, useState } from 'react';
 import { get } from '../lib/api.js';
 import { first, ago, plural } from '../lib/fmt.js';
@@ -35,6 +36,7 @@ export default function Home() {
           </div>
         </section>
       )}
+      <Arbitration view="summary" compact/>
       <section className="sect">
         <div className="sect-h"><h2>Últimas notificações</h2>{h?.unread > 0 && <span className="pmeta">{plural(h.unread, 'por ler', 'por ler')}</span>}</div>
         {!h ? <p className="pmeta">A carregar…</p> : h.latest.length ? (

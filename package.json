@@ -5,7 +5,7 @@
   "description": "Base LPJ Sports: núcleo comum (contas, perfis, notificações, emails, documentos) para as apps da LPJ Sports. Primeira app: C.Arbitragem.",
   "type": "module",
   "engines": {
-    "node": ">=22.13"
+    "node": "22.x"
   },
   "scripts": {
     "build": "node scripts/build.mjs",
@@ -13,7 +13,9 @@
     "start": "node server/index.js",
     "seed:demo": "node scripts/seed-demo.mjs",
     "test": "node --test test/*.test.js",
-    "test:postgres": "node --test test/postgres.test.js"
+    "test:postgres": "node --test test/postgres.test.js",
+    "migrate:arbitration": "node scripts/migrate-arbitration.mjs",
+    "seed:arbitration": "node scripts/seed-arbitration-demo.mjs"
   },
   "dependencies": {
     "@supabase/server": "^1.9.2",

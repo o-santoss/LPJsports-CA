@@ -15,6 +15,7 @@ export default async function handler(req, res) {
     console.error('API_STARTUP_ERROR', {
       name: error?.name,
       code: error?.code,
+      message: String(error?.message || 'startup failed').replace(/postgres(?:ql)?:\/\/[^\s]+/gi, '[redacted]').replace(/sb_secret_[\w-]+/g, '[redacted]'),
     });
 
     res.writeHead(503, {

@@ -1,3 +1,4 @@
+import Arbitration from '../arbitration/Arbitration.jsx';
 import React, { useState } from 'react';
 import { put, del } from '../lib/api.js';
 import { squarePhoto } from '../lib/image.js';
@@ -70,6 +71,7 @@ export default function Profile() {
         <div className="row end"><button className="btn" disabled={busy}>Guardar</button></div>
       </form>
 
+      <Arbitration view="qualification" compact/>
       <ChangePin />
 
       <section className="card mt">

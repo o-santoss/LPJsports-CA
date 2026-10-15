@@ -266,3 +266,23 @@ test('signed document upload requires admin and rejects tampered receipts', asyn
   const saved = await admin('POST', '/api/documents', { title: 'Signed', cat: 'Outros', kind: 'file', file: { name: 'signed.pdf', receipt: signed.data.receipt } });
   assert.equal(saved.status, 200, JSON.stringify(saved.data));
 });
+
+test('arbitragem: comandos persistem, JA atribuído propõe e só CA confirma',async()=>{
+  const jaUser=await admin('POST','/api/users',{name:'JA Arbitragem',email:'ja-arb@exemplo.pt',role:'ja',status:'ativo',pin:'1470'});
+  assert.equal(jaUser.status,200);const uid=jaUser.data.user.id;
+  const users=(await admin('GET','/api/users')).data.users;const aid=users.find(u=>u.email==='ana@exemplo.pt').id;
+  assert.equal((await admin('POST','/api/arbitration/command',{action:'qualification',data:{userId:aid,funcs:['CAD','LIN'],lv:{A:'Nível 1 FPT'},courses:[],recNext:''}})).status,200);
+  const date='2030-01-06';
+  const created=await admin('POST','/api/arbitration/command',{action:'tour',data:{name:'Persisted Tournament',cat:'Campeonato Nacional (CN)',city:'Lisboa',region:'Lisboa',club:'CT Lisboa',start:date,end:'2030-01-13',needs:{JA:1,CAD:1},resp:[uid]}});
+  assert.equal(created.status,200,JSON.stringify(created.data));
+  const snapshot=(await admin('GET','/api/arbitration/state')).data;const t=snapshot.tours.find(t=>t.name==='Persisted Tournament');assert.ok(t);
+  const jaClient=client();assert.equal((await jaClient('POST','/api/auth/login',{id:'ja-arb@exemplo.pt',pin:'1470'})).status,200);
+  const proposed=await jaClient('POST','/api/arbitration/command',{action:'nomination',data:{t:t.id,u:aid,fn:'CAD',days:[date]}});assert.equal(proposed.status,200,JSON.stringify(proposed.data));
+  const n=(await admin('GET','/api/arbitration/state')).data.noms.find(n=>n.t===t.id);
+  assert.equal((await jaClient('POST','/api/arbitration/command',{action:'convocation',data:{t:t.id,ids:[n.id]}})).status,403);
+  const confirmed=await admin('POST','/api/arbitration/command',{action:'convocation',data:{t:t.id,ids:[n.id]}});assert.equal(confirmed.status,200,JSON.stringify(confirmed.data));
+  assert.equal((await admin('GET','/api/arbitration/state')).data.noms.find(x=>x.id===n.id).status,'confirmada');
+  const person=client();await person('POST','/api/auth/login',{id:'ana@exemplo.pt',pin:'4826'});
+  await person('PUT','/api/me',{extra:{funcs:['JA'],recNext:'2099-01-01'}});
+  assert.deepEqual((await admin('GET','/api/arbitration/state')).data.users.find(u=>u.id===aid).funcs,['CAD','LIN']);
+});

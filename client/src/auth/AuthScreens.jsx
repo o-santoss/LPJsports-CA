@@ -1,3 +1,4 @@
+import {QualificationFields} from '../arbitration/Arbitration.jsx';
 // Ecrãs sem sessão: entrar, criar conta, recuperar o código e conta por aprovar.
 import React, { useState } from 'react';
 import { post } from '../lib/api.js';
@@ -64,7 +65,7 @@ function Login({ nav, initialId = '' }) {
 
 function Register({ nav }) {
   const { config } = useApp();
-  const [f, setF] = useState({ name: '', email: '', phone: '', region: config.regions.includes('Lisboa') ? 'Lisboa' : '', assoc: '', licence: '', pin: '', pin2: '', consent: false });
+  const [f, setF] = useState({ name: '', email: '', phone: '', region: config.regions.includes('Lisboa') ? 'Lisboa' : '', assoc: '', licence: '', extra:{funcs:[],lv:{},recNext:'',courses:[]}, recLast:'',recPlace:'', pin: '', pin2: '', consent: false });
   const [err, setErr] = useState('');
   const [busy, run] = useBusy();
   const set = (k) => (e) => setF({ ...f, [k]: e.target.type === 'checkbox' ? e.target.checked : e.target.value });
@@ -73,7 +74,7 @@ function Register({ nav }) {
     run(async () => {
       setErr('');
       try {
-        const r = await post('/api/auth/register', f);
+        const r = await post('/api/auth/register', {...f,extra:{...f.extra,courses:f.recLast?[{type:'Recertificação',name:'Recertificação de árbitros FPT',date:f.recLast,place:f.recPlace}]:[]}});
         nav('done', { name: r.name });
       } catch (ex) { setErr(ex.message); scrollTo(0, 0); }
     });
@@ -95,6 +96,8 @@ function Register({ nav }) {
         </Field>
         <Field label="Nº de licença (se tiveres)" id="rg-lic"><input className="inp" id="rg-lic" value={f.licence} onChange={set('licence')} placeholder="FPT-12345" /></Field>
       </div>
+      <QualificationFields value={f.extra} onChange={extra=>setF({...f,extra})} registration/>
+      <div className="grid2"><Field label="Última recertificação" id="rg-last"><input className="inp" type="date" id="rg-last" value={f.recLast} onChange={set('recLast')}/></Field><Field label="Local da última recertificação" id="rg-place"><input className="inp" id="rg-place" value={f.recPlace} onChange={set('recPlace')}/></Field></div>
       <div className="grid2">
         <Field label="Código de acesso (4 algarismos)" id="rg-pin"><PinInput id="rg-pin" autoComplete="new-password" value={f.pin} onChange={set('pin')} /></Field>
         <Field label="Repete o código" id="rg-pin2"><PinInput id="rg-pin2" autoComplete="new-password" value={f.pin2} onChange={set('pin2')} /></Field>

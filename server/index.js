@@ -10,6 +10,7 @@ import { HttpError, readJson, sendJson, serveStatic, unauthorized, forbidden, SE
 import { loadSession, clientIp, hashPin } from './core/auth.js';
 import { createMailer } from './core/mail.js';
 import { createNotifier } from './core/notify.js';
+import { registerArbitrationRoutes } from './modules/arbitration/routes.js';
 import { registerCoreRoutes, HANDLED } from './modules/core/routes.js';
 
 export async function createApp({ databaseUrl = config.databaseUrl, db: providedDb, fetchImpl } = {}) {
@@ -24,6 +25,7 @@ export async function createApp({ databaseUrl = config.databaseUrl, db: provided
   const router = createRouter();
   const ctx = { db, mailer, notify, audit };
   registerCoreRoutes(router, ctx);
+  registerArbitrationRoutes(router, ctx);
   // Os módulos de cada app (ex.: arbitragem) registam aqui as suas rotas.
   for (const m of APP.modules) m.register?.(router, ctx);
 
